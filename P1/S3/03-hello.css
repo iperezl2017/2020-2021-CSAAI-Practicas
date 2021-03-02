@@ -1,0 +1,13 @@
+body{
+    background-color: rgb(32, 188, 240);
+}
+
+/* Estilo para las etiquetas de tipo h1 */
+h1 {
+  color:rgb(238, 8, 8);
+}
+
+/* Estilo para los párrafos */
+p {
+  color: rgb(109, 109, 245);
+}

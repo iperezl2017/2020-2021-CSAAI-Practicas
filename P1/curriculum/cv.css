@@ -1,0 +1,35 @@
+body{
+    background:url('stars.jpg') center  no-repeat;
+    background-size:3840px 2160px;
+}
+@font-face{
+    font-family:"Starjedi";
+    src: url("Starjedi.ttf");
+}
+h1{ margin-left: 40%;
+    color: rgb(238, 255, 0);}
+p {
+    padding: 0px;
+    margin: 0px;
+    margin-left: 25%;
+    margin-right: 25%;
+    color: rgb(219, 253, 28);
+    font-family:"Starjedi";
+  }
+  div {
+    padding-right: 20px;
+    padding-left: 20px;
+    margin: 25px;
+    color: chartreuse;
+    font-size: large;
+    }
+    .grogu{
+        border: solid;
+        border-color: rgb(248, 248, 248);
+        padding-left: 4%;
+        margin-left: 7.5%;
+        margin-right: 80%;
+        background-color:rgb(0, 0, 0);
+        font-family: "Starjedi";
+        font-size: 150;
+    }

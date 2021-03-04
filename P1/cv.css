@@ -69,3 +69,11 @@ p{
         font-size: large;
         color: rgb(0, 0, 0);
     }
+    .boton1{
+      background: url(casco.jpg);
+      background-size: 100% 100%;
+      width: 60px;
+      height: 40px;
+      margin-top:  5%;
+      margin-left: 3%;
+    }

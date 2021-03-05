@@ -20,8 +20,8 @@ p{
     padding: 0px;
     margin: 0px;
     margin-left: 35%;
-    margin-right: 25%;
-    margin-top: -25%;
+    margin-right: 10%;
+    margin-top: -40%;
     color: rgb(219, 253, 28);
     font-family:"Starjedi";
     font-size: 125%;
@@ -37,7 +37,7 @@ p{
     }
 
     to {
-      margin-top: -25%;
+      margin-top: -40%;
       transform:rotateX(0deg);
     }
   }

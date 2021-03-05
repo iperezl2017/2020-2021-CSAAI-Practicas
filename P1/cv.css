@@ -25,14 +25,14 @@ p{
     color: rgb(219, 253, 28);
     font-family:"Starjedi";
     font-size: 125%;
-    animation-duration: 3s;
+    animation-duration: 45s;
     animation-name: slidein;
     
   }
 
   @keyframes slidein {
     from {
-      margin-top: 20%;
+      margin-top: -5%;
       transform:rotateX(60deg);
     }
 

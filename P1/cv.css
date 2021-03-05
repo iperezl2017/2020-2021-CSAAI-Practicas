@@ -20,12 +20,12 @@ p{
     padding: 0px;
     margin: 0px;
     margin-left: 35%;
-    margin-right: 10%;
-    margin-top: -35%;
+    margin-right: 25%;
+    margin-top: -25%;
     color: rgb(219, 253, 28);
     font-family:"Starjedi";
     font-size: 125%;
-    animation-duration: 30s;
+    animation-duration: 3s;
     animation-name: slidein;
     
   }
@@ -37,7 +37,7 @@ p{
     }
 
     to {
-      margin-top: -35%;
+      margin-top: -25%;
       transform:rotateX(0deg);
     }
   }

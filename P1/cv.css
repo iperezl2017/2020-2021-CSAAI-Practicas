@@ -70,10 +70,26 @@ p{
         color: rgb(0, 0, 0);
     }
     .boton1{
+      background: url(groguboton.jfif);
+      background-size: 100% 100%;
+      width: 120px;
+      height: 80px;
+      margin-top:  30%;
+      margin-left: 1%;
+    }
+    .boton2{
       background: url(casco.jpg);
       background-size: 100% 100%;
-      width: 60px;
-      height: 40px;
-      margin-top:  5%;
-      margin-left: 3%;
+      width: 120px;
+      height: 80px;
+      margin-top:  30%;
+      margin-left: 15%;
+    }
+    .boton3{
+      background: url(starwars.png);
+      background-size: 100% 100%;
+      width: 120px;
+      height: 80px;
+      margin-top:  30%;
+      margin-left: 30%;
     }

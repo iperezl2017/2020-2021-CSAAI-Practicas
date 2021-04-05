@@ -1,0 +1,37 @@
+body{background-color: cadetblue;}
+
+
+div{
+    display: block;
+    background-color: brown;
+    margin: 0 auto;
+    border-radius: 25px;
+    padding: 20px;
+    width: 300px;
+    height: 500px;
+}
+
+p{
+    display: block;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+    width: 300px;
+    height: 100px;
+    line-height: 100px;
+    background-color: cornsilk;
+    border-radius: 25px;
+    overflow-y: scroll;
+}
+
+button{
+    width: 50px;
+    height: 50px;
+    font-size: 25px;
+}
+
+.boton{
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+}

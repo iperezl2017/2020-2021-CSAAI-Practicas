@@ -1,82 +1,90 @@
 console.log("Ejecutando JS...");
 
-
-
 display = document.getElementById("display")
 igual = document.getElementById("igual")
 clear = document.getElementById("clear")
 
-
-
-
-clear.onclick = () => {
-  display.innerHTML = "0";
-  estado = ESTADO.INIT;
+const ESTADO = {
+  INIT: 0,
+  OP1: 1,
+  OPERATION: 2,
+  OP2: 3,
+  OP3: 4
 }
-
-
-boton1.onclick = () => {
-  display.innerHTML += boton1.value;
-}
-
-
-boton2.onclick = () => {
-  display.innerHTML += boton2.value;
-}
-
-boton3.onclick = () => {
-    display.innerHTML += boton3.value;
+var estado = ESTADO.INIT;
+var coma = 0;
+function dig(x){
+  if(estado == ESTADO.INIT){
+    display.innerHTML = x;
+    estado = ESTADO.OP1;
   }
-
-boton4.onclick = () => {
-    display.innerHTML += boton4.value;
-}
-
-boton5.onclick = () => {
-    display.innerHTML += boton5.value;
-}
-
-boton6.onclick = () => {
-    display.innerHTML += boton6.value;
-}
-
-boton7.onclick = () => {
-    display.innerHTML += boton7.value;
-}
-
-boton8.onclick = () => {
-    display.innerHTML += boton8.value;
-}
-
-boton9.onclick = () => {
-    display.innerHTML += boton9.value;
-}
-
-suma.onclick = () => {
-  display.innerHTML += suma.value;
-}
-
-resta.onclick = () => {
-    display.innerHTML += resta.value;
+  else if(estado == ESTADO.OP1){
+    display.innerHTML += x;
+    estado = ESTADO.OP1;
   }
-
-mult.onclick = () => {
-    display.innerHTML += mult.value;
+  else if(estado == ESTADO.OPERATION){
+    display.innerHTML += x;
+    estado = ESTADO.OP2;
+  }
+  else if(estado == ESTADO.OP2 || estado == ESTADO.OP3){
+    display.innerHTML += x;
+    estado = ESTADO.OP3;
+  }
 }
 
-div.onclick = () => {
-    display.innerHTML += div.value;
+function operar(op){
+  if(estado == ESTADO.OP1){
+    display.innerHTML += op;
+    estado = ESTADO.OPERATION;
+  }
+  else if(estado == ESTADO.OP3){
+  display.innerHTML += op;
+  estado = ESTADO.OP3;
+  }
+  else if (estado == ESTADO.OP3){
+  display.innerHTML += op;
+  estado = ESTADO.OP3;
+  }
 }
 
-decimal.onclick = () => {
-    display.innerHTML = decimal.value + ".";
+function resultado(){
+  if (estado == ESTADO.OP3 || estado == ESTADO.OP2){
+    display.innerHTML = eval(display.innerHTML);
+    estado = ESTADO.OP1;
+  }
+}
+
+digito = document.getElementsByClassName("digito")
+
+for (i=0; i<digito.length; i++) {
+  digito[i].onclick = (ev) => {
+    dig(ev.target.value)
+  }
+}
+
+op = document.getElementsByClassName("opr")
+for (i=0; i<op.length; i++) {
+  op[i].onclick = (ev) => {
+    operar(ev.target.value)
+  }
 }
 
 igual.onclick = () => {
-  display.innerHTML = eval(display.innerHTML);
+  resultado();
 }
 
-
 clear.onclick = () => {
-  display.innerHTML = "";
+  display.innerHTML = "0";
+  estado = ESTADO.INIT
+}
+clearlast.onclick = () => {
+  estado = ESTADO.OP2;
+  display.innerHTML = display.innerHTML.slice(0,-1);
+}
+
+coma.onclick = () => {
+  if (estado == ESTADO.OP1 || estado == ESTADO.OP3 || estado == ESTADO.INIT){
+    display.innerHTML == coma.innerHTML;
+    estado = ESTADO.OP2;
+  }
 }

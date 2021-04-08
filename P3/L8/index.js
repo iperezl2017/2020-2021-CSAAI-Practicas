@@ -9,35 +9,30 @@ canvas.height = 900;
 //-- Obtener el contexto del canvas
 const ctx = canvas.getContext("2d");
 
-//-- Coordenadas del objeto
-let x = 0;
-let y = 10;
+let x = 300;
+let y = 850;
 
-//-- Velocidades del objeto
 let velx = 3;
 let vely = 1;
 
-//-- Funcion principal de animacion
+let start = false;
+
 function update() 
 {
+
   console.log("test");
-  //-- Algoritmo de animacion:
-  //-- 1) Actualizar posicion del  elemento
-  //-- (física del movimiento rectilineo uniforme)
-
-   //-- Condicion de rebote en extremos verticales del canvas
-   if (x < 0 || x >= (canvas.width - 20) ) {
-    velx = -velx;
-  }
-
-  //-- Condición de rebote en extremos horizontales del canvas
-  if (y <= 0 || y > canvas.height - 20) {
-    vely = -vely;
-  }
-
-  //-- Actualizar la posición
-  x = x + velx;
-  y = y + vely;
+ 
+  
+    if (x < 0 || x >= (canvas.width - 20) ) {
+        velx = -velx;
+    }
+    if (y <= 0 || y > canvas.height - 20) {
+        vely = -vely;
+    }
+    if (start == true){
+    x = x + velx;
+    y = y + vely;
+    } 
 
   //-- 2) Borrar el canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -59,6 +54,16 @@ function update()
   //-- 4) Volver a ejecutar update cuando toque
   requestAnimationFrame(update);
 }
+
+document.onkeydown = (e) => {
+    console.log("were")
+    switch (e.key) {
+      case 13 :
+          start == true;
+          console.log("algo");
+      break;
+      }
+  }
 
 //-- ¡Que empiece la función!
 update();

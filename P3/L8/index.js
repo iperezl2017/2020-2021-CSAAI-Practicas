@@ -34,8 +34,16 @@ let y1 = 200;
 let y2 = 150;
 let y3 = 100;
 let y4 = 50;
+//Audio
+const myAudio = document.getElementById('music');
 
-
+function play (){
+  myAudio.muted = "true";
+  myAudio.play();
+  myAudio.muted = "false";
+  myAudio.play();
+}
+play();
 
 let contadorpuntos = 0;
 
@@ -368,7 +376,7 @@ function update()
     xbola = xbola + velxbola;
     ybola = ybola + velybola;
 
-    if (xbola >= xRaqueta && xbola<= (xRaqueta) && ybola >= yRaqueta && ybola <= (yRaqueta)) {
+    if (xbola == (xRaqueta) &&  ybola == (yRaqueta - 75)) {
       velybola = velybola * -1;
   }
 

@@ -46,7 +46,7 @@ function drawladrillos(){
    ctx.stroke()
  ctx.closePath();
 
-   //rect1
+   //rect2
   ctx.beginPath();
    ctx.rect(100,200,50,25);
    ctx.fillStyle = 'red';
@@ -54,7 +54,7 @@ function drawladrillos(){
    ctx.stroke()
  ctx.closePath();
 
-   //rect1
+   //rect3
   ctx.beginPath();
    ctx.rect(160,200,50,25);
    ctx.fillStyle = 'yellow';
@@ -62,7 +62,7 @@ function drawladrillos(){
    ctx.stroke()
  ctx.closePath();
 
-  //rect 2
+  //rect4
   ctx.beginPath();
     ctx.rect(220,200,50,25);
     ctx.fillStyle = 'green';
@@ -70,7 +70,7 @@ function drawladrillos(){
     ctx.stroke()
   ctx.closePath();
 
-  //rect1
+  //rect5
   ctx.beginPath();
     ctx.rect(280,200,50,25);
     ctx.fillStyle = 'blue';
@@ -78,34 +78,255 @@ function drawladrillos(){
     ctx.stroke()
   ctx.closePath();
 
-  //rect 3
+  //rect6
   ctx.beginPath();
     ctx.rect(340,200,50,25);
+    ctx.fillStyle = 'red';
+    ctx.fill();
+    ctx.stroke()
+  ctx.closePath();
+
+  //rect7
+  ctx.beginPath();
+    ctx.rect(400,200,50,25);
     ctx.fillStyle = 'yellow';
     ctx.fill();
     ctx.stroke()
   ctx.closePath();
 
-  //rect 4
+  //rect8
   ctx.beginPath();
-    ctx.rect(400,200,50,25);
+    ctx.rect(460,200,50,25);
     ctx.fillStyle = 'green';
     ctx.fill();
     ctx.stroke()
   ctx.closePath();
 
-  //rect 5
+   //rect9
+   ctx.beginPath();
+   ctx.rect(520,200,50,25);
+   ctx.fillStyle = 'blue';
+   ctx.fill();
+   ctx.stroke()
+ ctx.closePath();
+ //2fila
+
+  //rect1
   ctx.beginPath();
-    ctx.rect(460,200,50,25);
+   ctx.rect(40,150,50,25);
+   ctx.fillStyle = 'red';
+   ctx.fill();
+   ctx.stroke()
+ ctx.closePath();
+
+   //rect2
+  ctx.beginPath();
+   ctx.rect(100,150,50,25);
+   ctx.fillStyle = 'yellow';
+   ctx.fill();
+   ctx.stroke()
+ ctx.closePath();
+
+   //rect3
+  ctx.beginPath();
+   ctx.rect(160,150,50,25);
+   ctx.fillStyle = 'green';
+   ctx.fill();
+   ctx.stroke()
+ ctx.closePath();
+
+  //rect4
+  ctx.beginPath();
+    ctx.rect(220,150,50,25);
     ctx.fillStyle = 'blue';
     ctx.fill();
     ctx.stroke()
   ctx.closePath();
 
-   //rect 6
+  //rect5
+  ctx.beginPath();
+    ctx.rect(280,150,50,25);
+    ctx.fillStyle = 'red';
+    ctx.fill();
+    ctx.stroke()
+  ctx.closePath();
+
+  //rect6
+  ctx.beginPath();
+    ctx.rect(340,150,50,25);
+    ctx.fillStyle = 'yellow';
+    ctx.fill();
+    ctx.stroke()
+  ctx.closePath();
+
+  //rect7
+  ctx.beginPath();
+    ctx.rect(400,150,50,25);
+    ctx.fillStyle = 'green';
+    ctx.fill();
+    ctx.stroke()
+  ctx.closePath();
+
+  //rect8
+  ctx.beginPath();
+    ctx.rect(460,150,50,25);
+    ctx.fillStyle = 'blue';
+    ctx.fill();
+    ctx.stroke()
+  ctx.closePath();
+
+   //rect9
    ctx.beginPath();
-   ctx.rect(520,200,50,25);
+   ctx.rect(520,150,50,25);
    ctx.fillStyle = 'red';
+   ctx.fill();
+   ctx.stroke()
+ ctx.closePath();
+
+ //3fila
+
+   //rect1
+   ctx.beginPath();
+   ctx.rect(40,100,50,25);
+   ctx.fillStyle = 'yellow';
+   ctx.fill();
+   ctx.stroke()
+ ctx.closePath();
+
+   //rect2
+  ctx.beginPath();
+   ctx.rect(100,100,50,25);
+   ctx.fillStyle = 'green';
+   ctx.fill();
+   ctx.stroke()
+ ctx.closePath();
+
+   //rect3
+  ctx.beginPath();
+   ctx.rect(160,100,50,25);
+   ctx.fillStyle = 'blue';
+   ctx.fill();
+   ctx.stroke()
+ ctx.closePath();
+
+  //rect4
+  ctx.beginPath();
+    ctx.rect(220,100,50,25);
+    ctx.fillStyle = 'red';
+    ctx.fill();
+    ctx.stroke()
+  ctx.closePath();
+
+  //rect5
+  ctx.beginPath();
+    ctx.rect(280,100,50,25);
+    ctx.fillStyle = 'yellow';
+    ctx.fill();
+    ctx.stroke()
+  ctx.closePath();
+
+  //rect6
+  ctx.beginPath();
+    ctx.rect(340,100,50,25);
+    ctx.fillStyle = 'green';
+    ctx.fill();
+    ctx.stroke()
+  ctx.closePath();
+
+  //rect7
+  ctx.beginPath();
+    ctx.rect(400,100,50,25);
+    ctx.fillStyle = 'blue';
+    ctx.fill();
+    ctx.stroke()
+  ctx.closePath();
+
+  //rect8
+  ctx.beginPath();
+    ctx.rect(460,100,50,25);
+    ctx.fillStyle = 'red';
+    ctx.fill();
+    ctx.stroke()
+  ctx.closePath();
+
+   //rect9
+   ctx.beginPath();
+   ctx.rect(520,100,50,25);
+   ctx.fillStyle = 'yellow';
+   ctx.fill();
+   ctx.stroke()
+ ctx.closePath();
+
+ //4fila
+
+  //rect1
+  ctx.beginPath();
+   ctx.rect(40,50,50,25);
+   ctx.fillStyle = 'green';
+   ctx.fill();
+   ctx.stroke()
+ ctx.closePath();
+
+   //rect2
+  ctx.beginPath();
+   ctx.rect(100,50,50,25);
+   ctx.fillStyle = 'blue';
+   ctx.fill();
+   ctx.stroke()
+ ctx.closePath();
+
+   //rect3
+  ctx.beginPath();
+   ctx.rect(160,50,50,25);
+   ctx.fillStyle = 'red';
+   ctx.fill();
+   ctx.stroke()
+ ctx.closePath();
+
+  //rect4
+  ctx.beginPath();
+    ctx.rect(220,50,50,25);
+    ctx.fillStyle = 'yellow';
+    ctx.fill();
+    ctx.stroke()
+  ctx.closePath();
+
+  //rect5
+  ctx.beginPath();
+    ctx.rect(280,50,50,25);
+    ctx.fillStyle = 'green';
+    ctx.fill();
+    ctx.stroke()
+  ctx.closePath();
+
+  //rect6
+  ctx.beginPath();
+    ctx.rect(340,50,50,25);
+    ctx.fillStyle = 'blue';
+    ctx.fill();
+    ctx.stroke()
+  ctx.closePath();
+
+  //rect7
+  ctx.beginPath();
+    ctx.rect(400,50,50,25);
+    ctx.fillStyle = 'red';
+    ctx.fill();
+    ctx.stroke()
+  ctx.closePath();
+
+  //rect8
+  ctx.beginPath();
+    ctx.rect(460,50,50,25);
+    ctx.fillStyle = 'yellow';
+    ctx.fill();
+    ctx.stroke()
+  ctx.closePath();
+
+   //rect9
+   ctx.beginPath();
+   ctx.rect(520,50,50,25);
+   ctx.fillStyle = 'greeb';
    ctx.fill();
    ctx.stroke()
  ctx.closePath();

@@ -11,13 +11,31 @@ const ctx = canvas.getContext("2d");
 let xcanvas = 590;
 let ycanvas = 890;
 //Bola
+//let xbola = 300;
+//let ybola = 850;
 let xbola = 300;
-let ybola = 850;
+let ybola = 600;
 let velxbola = 5;
 let velybola = 3;
 //Raqueta
 let xRaqueta = 300;
 let yRaqueta = 875;
+//Bricks f1
+let x1 = 40;
+let x2 = 100;
+let x3 = 160;
+let x4 = 220;
+let x5 = 280;
+let x6 = 340;
+let x7= 400;
+let x8 = 460;
+let x9 = 520;
+let y1 = 200;
+let y2 = 150;
+let y3 = 100;
+let y4 = 50;
+
+
 
 let contadorpuntos = 0;
 
@@ -38,9 +56,10 @@ ctx.closePath();
 }
 function drawladrillos(){
 
+//fila1
    //rect1
   ctx.beginPath();
-   ctx.rect(40,200,50,25);
+   ctx.rect(x1,y1,50,25);
    ctx.fillStyle = 'blue';
    ctx.fill();
    ctx.stroke()
@@ -48,7 +67,7 @@ function drawladrillos(){
 
    //rect2
   ctx.beginPath();
-   ctx.rect(100,200,50,25);
+   ctx.rect(x2,y1,50,25);
    ctx.fillStyle = 'red';
    ctx.fill();
    ctx.stroke()
@@ -56,7 +75,7 @@ function drawladrillos(){
 
    //rect3
   ctx.beginPath();
-   ctx.rect(160,200,50,25);
+   ctx.rect(x3,y1,50,25);
    ctx.fillStyle = 'yellow';
    ctx.fill();
    ctx.stroke()
@@ -64,7 +83,7 @@ function drawladrillos(){
 
   //rect4
   ctx.beginPath();
-    ctx.rect(220,200,50,25);
+    ctx.rect(x4,y1,50,25);
     ctx.fillStyle = 'green';
     ctx.fill();
     ctx.stroke()
@@ -72,7 +91,7 @@ function drawladrillos(){
 
   //rect5
   ctx.beginPath();
-    ctx.rect(280,200,50,25);
+    ctx.rect(x5,y1,50,25);
     ctx.fillStyle = 'blue';
     ctx.fill();
     ctx.stroke()
@@ -80,7 +99,7 @@ function drawladrillos(){
 
   //rect6
   ctx.beginPath();
-    ctx.rect(340,200,50,25);
+    ctx.rect(x6,y1,50,25);
     ctx.fillStyle = 'red';
     ctx.fill();
     ctx.stroke()
@@ -88,7 +107,7 @@ function drawladrillos(){
 
   //rect7
   ctx.beginPath();
-    ctx.rect(400,200,50,25);
+    ctx.rect(x7,y1,50,25);
     ctx.fillStyle = 'yellow';
     ctx.fill();
     ctx.stroke()
@@ -96,7 +115,7 @@ function drawladrillos(){
 
   //rect8
   ctx.beginPath();
-    ctx.rect(460,200,50,25);
+    ctx.rect(x8,y1,50,25);
     ctx.fillStyle = 'green';
     ctx.fill();
     ctx.stroke()
@@ -104,16 +123,17 @@ function drawladrillos(){
 
    //rect9
    ctx.beginPath();
-   ctx.rect(520,200,50,25);
+   ctx.rect(x9,y1,50,25);
    ctx.fillStyle = 'blue';
    ctx.fill();
    ctx.stroke()
  ctx.closePath();
+
  //2fila
 
   //rect1
   ctx.beginPath();
-   ctx.rect(40,150,50,25);
+   ctx.rect(x1,y2,50,25);
    ctx.fillStyle = 'red';
    ctx.fill();
    ctx.stroke()
@@ -121,7 +141,7 @@ function drawladrillos(){
 
    //rect2
   ctx.beginPath();
-   ctx.rect(100,150,50,25);
+   ctx.rect(x2,y2,50,25);
    ctx.fillStyle = 'yellow';
    ctx.fill();
    ctx.stroke()
@@ -129,7 +149,7 @@ function drawladrillos(){
 
    //rect3
   ctx.beginPath();
-   ctx.rect(160,150,50,25);
+   ctx.rect(x3,y2,50,25);
    ctx.fillStyle = 'green';
    ctx.fill();
    ctx.stroke()
@@ -137,7 +157,7 @@ function drawladrillos(){
 
   //rect4
   ctx.beginPath();
-    ctx.rect(220,150,50,25);
+    ctx.rect(x4,y2,50,25);
     ctx.fillStyle = 'blue';
     ctx.fill();
     ctx.stroke()
@@ -145,7 +165,7 @@ function drawladrillos(){
 
   //rect5
   ctx.beginPath();
-    ctx.rect(280,150,50,25);
+    ctx.rect(x5,y2,50,25);
     ctx.fillStyle = 'red';
     ctx.fill();
     ctx.stroke()
@@ -153,7 +173,7 @@ function drawladrillos(){
 
   //rect6
   ctx.beginPath();
-    ctx.rect(340,150,50,25);
+    ctx.rect(x6,y2,50,25);
     ctx.fillStyle = 'yellow';
     ctx.fill();
     ctx.stroke()
@@ -161,7 +181,7 @@ function drawladrillos(){
 
   //rect7
   ctx.beginPath();
-    ctx.rect(400,150,50,25);
+    ctx.rect(x7,y2,50,25);
     ctx.fillStyle = 'green';
     ctx.fill();
     ctx.stroke()
@@ -169,7 +189,7 @@ function drawladrillos(){
 
   //rect8
   ctx.beginPath();
-    ctx.rect(460,150,50,25);
+    ctx.rect(x8,y2,50,25);
     ctx.fillStyle = 'blue';
     ctx.fill();
     ctx.stroke()
@@ -177,7 +197,7 @@ function drawladrillos(){
 
    //rect9
    ctx.beginPath();
-   ctx.rect(520,150,50,25);
+   ctx.rect(x9,y2,50,25);
    ctx.fillStyle = 'red';
    ctx.fill();
    ctx.stroke()
@@ -187,7 +207,7 @@ function drawladrillos(){
 
    //rect1
    ctx.beginPath();
-   ctx.rect(40,100,50,25);
+   ctx.rect(x1,y3,50,25);
    ctx.fillStyle = 'yellow';
    ctx.fill();
    ctx.stroke()
@@ -195,7 +215,7 @@ function drawladrillos(){
 
    //rect2
   ctx.beginPath();
-   ctx.rect(100,100,50,25);
+   ctx.rect(x2,y3,50,25);
    ctx.fillStyle = 'green';
    ctx.fill();
    ctx.stroke()
@@ -203,7 +223,7 @@ function drawladrillos(){
 
    //rect3
   ctx.beginPath();
-   ctx.rect(160,100,50,25);
+   ctx.rect(x3,y3,50,25);
    ctx.fillStyle = 'blue';
    ctx.fill();
    ctx.stroke()
@@ -211,7 +231,7 @@ function drawladrillos(){
 
   //rect4
   ctx.beginPath();
-    ctx.rect(220,100,50,25);
+    ctx.rect(x4,y3,50,25);
     ctx.fillStyle = 'red';
     ctx.fill();
     ctx.stroke()
@@ -219,7 +239,7 @@ function drawladrillos(){
 
   //rect5
   ctx.beginPath();
-    ctx.rect(280,100,50,25);
+    ctx.rect(x5,y3,50,25);
     ctx.fillStyle = 'yellow';
     ctx.fill();
     ctx.stroke()
@@ -227,7 +247,7 @@ function drawladrillos(){
 
   //rect6
   ctx.beginPath();
-    ctx.rect(340,100,50,25);
+    ctx.rect(x6,y3,50,25);
     ctx.fillStyle = 'green';
     ctx.fill();
     ctx.stroke()
@@ -235,7 +255,7 @@ function drawladrillos(){
 
   //rect7
   ctx.beginPath();
-    ctx.rect(400,100,50,25);
+    ctx.rect(x7,y3,50,25);
     ctx.fillStyle = 'blue';
     ctx.fill();
     ctx.stroke()
@@ -243,7 +263,7 @@ function drawladrillos(){
 
   //rect8
   ctx.beginPath();
-    ctx.rect(460,100,50,25);
+    ctx.rect(x8,y3,50,25);
     ctx.fillStyle = 'red';
     ctx.fill();
     ctx.stroke()
@@ -251,7 +271,7 @@ function drawladrillos(){
 
    //rect9
    ctx.beginPath();
-   ctx.rect(520,100,50,25);
+   ctx.rect(x9,y3,50,25);
    ctx.fillStyle = 'yellow';
    ctx.fill();
    ctx.stroke()
@@ -261,7 +281,7 @@ function drawladrillos(){
 
   //rect1
   ctx.beginPath();
-   ctx.rect(40,50,50,25);
+   ctx.rect(x1,y4,50,25);
    ctx.fillStyle = 'green';
    ctx.fill();
    ctx.stroke()
@@ -269,7 +289,7 @@ function drawladrillos(){
 
    //rect2
   ctx.beginPath();
-   ctx.rect(100,50,50,25);
+   ctx.rect(x2,y4,50,25);
    ctx.fillStyle = 'blue';
    ctx.fill();
    ctx.stroke()
@@ -277,7 +297,7 @@ function drawladrillos(){
 
    //rect3
   ctx.beginPath();
-   ctx.rect(160,50,50,25);
+   ctx.rect(x3,y4,50,25);
    ctx.fillStyle = 'red';
    ctx.fill();
    ctx.stroke()
@@ -285,7 +305,7 @@ function drawladrillos(){
 
   //rect4
   ctx.beginPath();
-    ctx.rect(220,50,50,25);
+    ctx.rect(x4,y4,50,25);
     ctx.fillStyle = 'yellow';
     ctx.fill();
     ctx.stroke()
@@ -293,7 +313,7 @@ function drawladrillos(){
 
   //rect5
   ctx.beginPath();
-    ctx.rect(280,50,50,25);
+    ctx.rect(x5,y4,50,25);
     ctx.fillStyle = 'green';
     ctx.fill();
     ctx.stroke()
@@ -301,7 +321,7 @@ function drawladrillos(){
 
   //rect6
   ctx.beginPath();
-    ctx.rect(340,50,50,25);
+    ctx.rect(x6,y4,50,25);
     ctx.fillStyle = 'blue';
     ctx.fill();
     ctx.stroke()
@@ -309,7 +329,7 @@ function drawladrillos(){
 
   //rect7
   ctx.beginPath();
-    ctx.rect(400,50,50,25);
+    ctx.rect(x7,y4,50,25);
     ctx.fillStyle = 'red';
     ctx.fill();
     ctx.stroke()
@@ -317,7 +337,7 @@ function drawladrillos(){
 
   //rect8
   ctx.beginPath();
-    ctx.rect(460,50,50,25);
+    ctx.rect(x8,y4,50,25);
     ctx.fillStyle = 'yellow';
     ctx.fill();
     ctx.stroke()
@@ -325,7 +345,7 @@ function drawladrillos(){
 
    //rect9
    ctx.beginPath();
-   ctx.rect(520,50,50,25);
+   ctx.rect(x9,y4,50,25);
    ctx.fillStyle = 'greeb';
    ctx.fill();
    ctx.stroke()
@@ -341,15 +361,15 @@ function update()
     if (xbola < 0 || xbola >= xcanvas ) {
         velxbola = -velxbola;
     }
-    if (ybola <= 0 || ybola > ycanvas) {
+    if (ybola < 0) {
         velybola = -velybola;
     }
 
     xbola = xbola + velxbola;
     ybola = ybola + velybola;
 
-    if (ybola >= (yRaqueta - 10) && ybola <= (yRaqueta + 100)) {
-    velybola = velybola * -1;
+    if (xbola >= xRaqueta && xbola<= (xRaqueta) && ybola >= yRaqueta && ybola <= (yRaqueta)) {
+      velybola = velybola * -1;
   }
 
     if (xRaqueta < 0) {

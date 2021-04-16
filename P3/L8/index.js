@@ -401,40 +401,50 @@ function update()
     velxbola = velxbola * -1;
   }
   //colision bloque1
-  if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y1 + 12) && ybola <=(y1 + 25)) {
+  if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
+    ctx.clearRect(x1, y1, 50, 25);
+
   }
   //b2
-  if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y1 + 12) && ybola <=(y1 + 25)) {
+  if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
+    ctx.clearRect(x2, y1, 50, 25);
   }
   //b3
-  if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y1 + 12) && ybola <=(y1 + 25)) {
+  if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
+    ctx.clearRect(x3, y1, 50, 25);
   }
   //b4
-  if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y1 + 12) && ybola <=(y1 + 25)) {
+  if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
+    ctx.clearRect(x4, y1, 50, 25);
   }
   //b5
-  if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y1 + 12) && ybola <=(y1 + 25)) {
+  if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
+    ctx.clearRect(x5, y1, 50, 25);
   }
   //b6
-  if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y1 + 12) && ybola <=(y1 + 25)) {
+  if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
+    ctx.clearRect(x6, y1, 50, 25);
   }
   //b7
-  if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y1 + 12) && ybola <=(y1 + 25)) {
+  if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
+    ctx.clearRect(x7, y1, 50, 25);
   }
   //b8
-  if (xbola >= x8 && xbola <=(x8 + 50) && ybola >= (y1 + 12) && ybola <=(y1 + 25)) {
+  if (xbola >= x8 && xbola <=(x8 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
+    ctx.clearRect(x8, y1, 50, 25);
   }
   //b9
-  if (xbola >= x9 && xbola <=(x9 + 50) && ybola >= (y1 + 12) && ybola <=(y1 + 25)) {
+  if (xbola >= x9 && xbola <=(x9 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
+    ctx.clearRect(x9, y1, 50, 25);
   }
   if (xRaqueta < 0) {
     xRaqueta = 0;

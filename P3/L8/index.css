@@ -14,3 +14,28 @@ canvas {
     margin-top: 2.5%;
 
   }
+
+@font-face{
+        font-family:"Lazer84";
+        src: url("Lazer84.ttf");
+}
+
+div{
+    font-family: "Lazer84";
+    color: aqua;
+    margin-top: -40%;
+    margin-left: 13%;
+    font-size: 200%;
+}
+.Tabla{
+    font-family: "Lazer84";
+    color: rgb(255, 251, 10);
+    font-size: medium;
+    margin-top: 5%;
+}
+.Score{
+    font-family: "Lazer84";
+    color: rgb(255, 0, 0);
+    margin-top: -11.5%;
+    margin-left: 80%;
+}

@@ -390,13 +390,50 @@ function update()
     velxbola = -velxbola;
   }
   if (ybola < 0) {
-      velybola = -velybola;
+    velybola = -velybola;
   }
 
   xbola = xbola + velxbola;
   ybola = ybola + velybola;
-
+  //colisionraqueta
   if (xbola >= xRaqueta && xbola <=(xRaqueta + 100) && ybola >= (yRaqueta - 15) && ybola <=(yRaqueta + 75)) {
+    velybola = velybola * -1;
+    velxbola = velxbola * -1;
+  }
+  //colision bloque1
+  if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y1 + 12) && ybola <=(y1 + 25)) {
+    velybola = velybola * -1;
+  }
+  //b2
+  if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y1 + 12) && ybola <=(y1 + 25)) {
+    velybola = velybola * -1;
+  }
+  //b3
+  if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y1 + 12) && ybola <=(y1 + 25)) {
+    velybola = velybola * -1;
+  }
+  //b4
+  if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y1 + 12) && ybola <=(y1 + 25)) {
+    velybola = velybola * -1;
+  }
+  //b5
+  if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y1 + 12) && ybola <=(y1 + 25)) {
+    velybola = velybola * -1;
+  }
+  //b6
+  if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y1 + 12) && ybola <=(y1 + 25)) {
+    velybola = velybola * -1;
+  }
+  //b7
+  if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y1 + 12) && ybola <=(y1 + 25)) {
+    velybola = velybola * -1;
+  }
+  //b8
+  if (xbola >= x8 && xbola <=(x8 + 50) && ybola >= (y1 + 12) && ybola <=(y1 + 25)) {
+    velybola = velybola * -1;
+  }
+  //b9
+  if (xbola >= x9 && xbola <=(x9 + 50) && ybola >= (y1 + 12) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
   }
   if (xRaqueta < 0) {

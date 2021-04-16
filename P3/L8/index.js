@@ -16,9 +16,9 @@ let ycanvas = 890;
 let xbola = 300;
 let ybola = 600;
 let velxbola = 5;
-let velybola = 3;
+let velybola = -3;
 //Raqueta
-let xRaqueta = 300;
+let xRaqueta = 250;
 let yRaqueta = 875;
 //Bricks f1
 let x1 = 40;
@@ -36,34 +36,49 @@ let y3 = 100;
 let y4 = 50;
 //Audio
 const myAudio = document.getElementById('music');
+//Vidas
+let vidas = 3;
+//Estados
+const ESTADO = {
+  INIT : 0,
+  BEGIN: 1,
+  JUGANDO : 2,
+  FIN : 4,
+}
+let estado = ESTADO.INIT
+//Contador
+let contadorpuntos = 0;
 
+//Funciones
 function play (){
   myAudio.muted = "true";
   myAudio.play();
   myAudio.muted = "false";
   myAudio.play();
 }
-play();
 
-let contadorpuntos = 0;
-
-function drawbola(){
-      //-- 3) Dibujar los elementos visibles
+//Dibujar Raqueta
+function drawraqueta(){
   ctx.beginPath();
-  ctx.arc(xbola, ybola, 10, 0, 2 * Math.PI);
-
-  //-- Dibujar
-  ctx.fillStyle = 'red';
-
-  //-- Rellenar
+  ctx.rect(xRaqueta,yRaqueta,100,75);
+  ctx.fillStyle = 'rgb(255, 100, 50)';
   ctx.fill();
-
-  //-- Dibujar el trazo
   ctx.stroke()
 ctx.closePath();
 }
-function drawladrillos(){
 
+//Dibujar bola
+function drawbola(){
+  ctx.beginPath();
+  ctx.arc(xbola, ybola, 10, 0, 2 * Math.PI);
+  ctx.fillStyle = 'red';
+  ctx.fill();
+  ctx.stroke()
+ctx.closePath();
+}
+
+//Dibujar ladrillos
+function drawladrillos(){
 //fila1
    //rect1
   ctx.beginPath();
@@ -354,7 +369,7 @@ function drawladrillos(){
    //rect9
    ctx.beginPath();
    ctx.rect(x9,y4,50,25);
-   ctx.fillStyle = 'greeb';
+   ctx.fillStyle = 'green';
    ctx.fill();
    ctx.stroke()
  ctx.closePath();
@@ -362,51 +377,59 @@ function drawladrillos(){
 
 function update() 
 {
-
   console.log("test");
- 
-  
-    if (xbola < 0 || xbola >= xcanvas ) {
-        velxbola = -velxbola;
-    }
-    if (ybola < 0) {
-        velybola = -velybola;
-    }
 
-    xbola = xbola + velxbola;
-    ybola = ybola + velybola;
+  if (estado == ESTADO.JUGANDO){
 
-    if (xbola == (xRaqueta) &&  ybola == (yRaqueta - 75)) {
-      velybola = velybola * -1;
+  if (velxbola == 0 && velybola == 0){
+    velxbola = 5;
+    velybola = -3;
   }
 
-    if (xRaqueta < 0) {
-      xRaqueta = 0;
-    }
-    if (xRaqueta > 500){
-      xRaqueta = 500;
-    }
+  if (xbola < 0 || xbola >= xcanvas) {
+    velxbola = -velxbola;
+  }
+  if (ybola < 0) {
+      velybola = -velybola;
+  }
+
+  xbola = xbola + velxbola;
+  ybola = ybola + velybola;
+
+  if (xbola >= xRaqueta && xbola <=(xRaqueta + 100) && ybola >= (yRaqueta - 15) && ybola <=(yRaqueta + 75)) {
+    velybola = velybola * -1;
+  }
+  if (xRaqueta < 0) {
+    xRaqueta = 0;
+  }
+  if (xRaqueta > 500){
+    xRaqueta = 500;
+  }
+  if (ybola > 900){
+    estado = ESTADO.INIT;
+    vidas = vidas -1;
+  }
+}
+    
 
   //-- 2) Borrar el canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  ctx.beginPath();
-    ctx.rect(xRaqueta,yRaqueta,100,75);
-
-    //-- Dibujar
-    ctx.fillStyle = 'rgb(255, 100, 50)';
-
-    //-- Rellenar
-    ctx.fill();
-
-    //-- Dibujar el trazo
-    ctx.stroke()
-  ctx.closePath();
-
-  drawladrillos();
   drawbola();
+  drawraqueta();
+  drawladrillos();
+
+
+  if ( estado == ESTADO.INIT)
+  {   
+      xbola = 300;
+      ybola = 850;
+      velybola = 0;
+      velxbola = 0;
+    }
+ 
   //-- 4) Volver a ejecutar update cuando toque
   requestAnimationFrame(update);
+
 }
 
 
@@ -414,12 +437,18 @@ window.onkeydown = (e) => {
   //-- Según la tecla se hace una cosa u otra
   switch (e.key) {
     case "a":
-      xRaqueta = xRaqueta - 10;
+      xRaqueta = xRaqueta - 20;
     break;
 
     case "d":
-      xRaqueta = xRaqueta + 10;
+      xRaqueta = xRaqueta + 20;
     break;
+    case " ":
+      estado = ESTADO.JUGANDO;
+    break;
+    case "o":
+      myAudio.play();
+    break
   }
 }
 

@@ -22,20 +22,17 @@ let xRaqueta = 250;
 let yRaqueta = 875;
 //Bricks f1
 let x1 = 40;
-let x2 = 100;
-let x3 = 160;
-let x4 = 220;
-let x5 = 280;
-let x6 = 340;
-let x7= 400;
-let x8 = 460;
-let x9 = 520;
+let x2 = 120;
+let x3 = 200;
+let x4 = 280;
+let x5 = 360;
+let x6 = 440;
+let x7= 520;
+let x8 = 600;
 let y1 = 200;
 let y2 = 150;
 let y3 = 100;
 let y4 = 50;
-//EstadoLadrillos
-
 //Audio
 const myAudio = document.getElementById('music');
 //Vidas
@@ -50,6 +47,15 @@ const ESTADO = {
 let estado = ESTADO.INIT
 //Contador
 let contadorpuntos = 0;
+//Estado ladrillos
+let est11 = 1;
+let est12 = 1;
+let est13 = 1;
+let est14 = 1;
+let est15 = 1;
+let est16 = 1;
+let est17 = 1;
+let est18 = 1;
 
 //Funciones
 function play (){
@@ -57,13 +63,13 @@ function play (){
 }
 
 function mute (){
- myAudio.muted = "true";
+  myAudio.muted = "true";
 }
 
 //Dibujar Raqueta
 function drawraqueta(){
   ctx.beginPath();
-  ctx.rect(xRaqueta,yRaqueta,100,75);
+  ctx.rect(xRaqueta,yRaqueta,100,25);
   ctx.fillStyle = 'rgb(255, 100, 50)';
   ctx.fill();
   ctx.stroke()
@@ -147,14 +153,6 @@ function drawladrillos(){
     ctx.stroke()
   ctx.closePath();
 
-   //rect9
-   ctx.beginPath();
-   ctx.rect(x9,y1,50,25);
-   ctx.fillStyle = 'blue';
-   ctx.fill();
-   ctx.stroke()
- ctx.closePath();
-
  //2fila
 
   //rect1
@@ -220,14 +218,6 @@ function drawladrillos(){
     ctx.fill();
     ctx.stroke()
   ctx.closePath();
-
-   //rect9
-   ctx.beginPath();
-   ctx.rect(x9,y2,50,25);
-   ctx.fillStyle = 'red';
-   ctx.fill();
-   ctx.stroke()
- ctx.closePath();
 
  //3fila
 
@@ -295,14 +285,6 @@ function drawladrillos(){
     ctx.stroke()
   ctx.closePath();
 
-   //rect9
-   ctx.beginPath();
-   ctx.rect(x9,y3,50,25);
-   ctx.fillStyle = 'yellow';
-   ctx.fill();
-   ctx.stroke()
- ctx.closePath();
-
  //4fila
 
   //rect1
@@ -369,13 +351,36 @@ function drawladrillos(){
     ctx.stroke()
   ctx.closePath();
 
-   //rect9
-   ctx.beginPath();
-   ctx.rect(x9,y4,50,25);
-   ctx.fillStyle = 'green';
-   ctx.fill();
-   ctx.stroke()
- ctx.closePath();
+}
+
+function borrarladrillos(){
+
+  if (est11 = 0) {
+    ctx.clearRect(x1, y1, 50, 25);
+  }
+  if (est12 = 0) {
+    ctx.clearRect(x2, y1, 50, 25);
+  }
+  if (est13 = 0) {
+    ctx.clearRect(x3, y1, 50, 25);
+  }
+  if (est14 = 0) {
+    ctx.clearRect(x4, y1, 50, 25);
+  }
+  if (est15 = 0) {
+    ctx.clearRect(x5, y1, 50, 25);
+  }
+  if (est16 = 0) {
+    ctx.clearRect(x6, y1, 50, 25);
+  }
+  if (est17 = 0) {
+    ctx.clearRect(x7, y1, 50, 25);
+  }
+  if (est18 = 0) {
+    ctx.clearRect(x8, y1, 50, 25);
+  }
+  
+  
 }
 
 function update() 
@@ -399,55 +404,49 @@ function update()
   xbola = xbola + velxbola;
   ybola = ybola + velybola;
   //colisionraqueta
-  if (xbola >= xRaqueta && xbola <=(xRaqueta + 100) && ybola >= (yRaqueta - 15) && ybola <=(yRaqueta + 75)) {
+  if (xbola >= xRaqueta && xbola <=(xRaqueta + 100) && ybola >= (yRaqueta - 15) && ybola <=(yRaqueta + 25)) {
     velybola = velybola * -1;
-    velxbola = velxbola * -1;
+    velxbola = velxbola * 1;
   }
   //colision bloque1
   if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
-    ctx.clearRect(x1, y1, 50, 25);
-
+    est11 = 0;
   }
   //b2
   if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
-    ctx.clearRect(x2, y1, 50, 25);
+    est12 = 0;
   }
   //b3
   if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
-    ctx.clearRect(x3, y1, 50, 25);
+    est13 = 0;
   }
   //b4
   if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
-    ctx.clearRect(x4, y1, 50, 25);
+    est14 = 0;
   }
   //b5
   if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
-    ctx.clearRect(x5, y1, 50, 25);
+    est15 = 0;
   }
   //b6
   if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
-    ctx.clearRect(x6, y1, 50, 25);
+    est16 = 0;
   }
   //b7
   if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
-    ctx.clearRect(x7, y1, 50, 25);
+    est17 = 0;
   }
   //b8
   if (xbola >= x8 && xbola <=(x8 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
-    ctx.clearRect(x8, y1, 50, 25);
-  }
-  //b9
-  if (xbola >= x9 && xbola <=(x9 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
-    velybola = velybola * -1;
-    ctx.clearRect(x9, y1, 50, 25);
+    est18 = 0;
   }
   if (xRaqueta < 0) {
     xRaqueta = 0;

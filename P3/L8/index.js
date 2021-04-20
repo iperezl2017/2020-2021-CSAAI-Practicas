@@ -34,6 +34,8 @@ let y1 = 200;
 let y2 = 150;
 let y3 = 100;
 let y4 = 50;
+//EstadoLadrillos
+
 //Audio
 const myAudio = document.getElementById('music');
 //Vidas
@@ -51,10 +53,11 @@ let contadorpuntos = 0;
 
 //Funciones
 function play (){
-  myAudio.muted = "true";
-  myAudio.play();
   myAudio.muted = "false";
-  myAudio.play();
+}
+
+function mute (){
+ myAudio.muted = "true";
 }
 
 //Dibujar Raqueta
@@ -495,7 +498,12 @@ window.onkeydown = (e) => {
     break;
     case "o":
       myAudio.play();
-    break
+      console.log("play");
+    break;
+    case "p":
+      mute();
+      console.log("mute");
+    break;
   }
 }
 

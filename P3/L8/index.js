@@ -374,49 +374,49 @@ function colisionladrillos() {
 //colision fila1
 //colision bloque1
   if ( est11 == 1){
-    if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
+    if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y1) && ybola <=(y1 + 25)) {
       velybola = velybola * -1;
       est11 = 0;
     }
   }
     //b2
   if ( est12 == 1){
-    if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
+    if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y1) && ybola <=(y1 + 25)) {
       velybola = velybola * -1;
       est12 = 0;
     }
   }
     //b3
   if ( est13 == 1){
-    if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
+    if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y1) && ybola <=(y1 + 25)) {
       velybola = velybola * -1;
       est13 = 0;
     }
   }
     //b4
   if ( est14 == 1){
-    if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
+    if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y1) && ybola <=(y1 + 25)) {
       velybola = velybola * -1;
       est14 = 0;
     }
   }
     //b5
   if ( est15 == 1){
-    if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
+    if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y1) && ybola <=(y1 + 25)) {
       velybola = velybola * -1;
       est15 = 0;
     }
   }
     //b6
   if ( est16 == 1){
-    if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
+    if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y1) && ybola <=(y1 + 25)) {
       velybola = velybola * -1;
       est16 = 0;
     }
   }
     //b7
   if ( est17 == 1){
-    if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
+    if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y1) && ybola <=(y1 + 25)) {
       velybola = velybola * -1;
       est17 = 0;
     }
@@ -424,49 +424,49 @@ function colisionladrillos() {
 //colision fila2
 //colision bloque1
   if ( est21 == 1){
-    if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y2 + 15) && ybola <=(y2 + 25)) {
+    if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y2) && ybola <=(y2 + 25)) {
       velybola = velybola * -1;
       est21 = 0;
     }
   }
     //b2
   if ( est22 == 1){
-    if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y2 + 15) && ybola <=(y2 + 25)) {
+    if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y2) && ybola <=(y2 + 25)) {
       velybola = velybola * -1;
       est22 = 0;
     }
   }
     //b3
   if ( est23 == 1){
-    if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y2 + 15) && ybola <=(y2 + 25)) {
+    if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y2) && ybola <=(y2 + 25)) {
       velybola = velybola * -1;
       est23 = 0;
     }
   }
     //b4
   if ( est24 == 1){
-    if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y2 + 15) && ybola <=(y2 + 25)) {
+    if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y2) && ybola <=(y2 + 25)) {
       velybola = velybola * -1;
       est24 = 0;
     }
   }
     //b5
   if ( est25 == 1){
-    if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y2 + 15) && ybola <=(y2 + 25)) {
+    if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y2) && ybola <=(y2 + 25)) {
       velybola = velybola * -1;
       est25 = 0;
     }
   }
     //b6
   if ( est26 == 1){
-    if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y2 + 15) && ybola <=(y2 + 25)) {
+    if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y2) && ybola <=(y2 + 25)) {
       velybola = velybola * -1;
       est26 = 0;
     }
   }
     //b7
   if ( est27 == 1){
-    if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y2 + 15) && ybola <=(y2 + 25)) {
+    if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y2) && ybola <=(y2 + 25)) {
       velybola = velybola * -1;
       est27 = 0;
     }
@@ -474,49 +474,49 @@ function colisionladrillos() {
 //colision fila3
 //colision bloque1
   if ( est31 == 1){
-    if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y3 + 15) && ybola <=(y3 + 25)) {
+    if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y3) && ybola <=(y3 + 25)) {
       velybola = velybola * -1;
       est31 = 0;
     }
   }
     //b2
   if ( est32 == 1){
-    if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y3 + 15) && ybola <=(y3 + 25)) {
+    if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y3) && ybola <=(y3 + 25)) {
       velybola = velybola * -1;
       est32 = 0;
     }
   }
     //b3
   if ( est33 == 1){
-    if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y3 + 15) && ybola <=(y3 + 25)) {
+    if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y3) && ybola <=(y3 + 25)) {
       velybola = velybola * -1;
       est33 = 0;
     }
   }
     //b4
   if ( est34 == 1){
-    if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y3 + 15) && ybola <=(y3 + 25)) {
+    if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y3) && ybola <=(y3 + 25)) {
       velybola = velybola * -1;
       est34 = 0;
     }
   }
     //b5
   if ( est35 == 1){
-    if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y3 + 15) && ybola <=(y3 + 25)) {
+    if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y3) && ybola <=(y3 + 25)) {
       velybola = velybola * -1;
       est35 = 0;
     }
   }
     //b6
   if ( est36 == 1){
-    if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y3 + 15) && ybola <=(y3 + 25)) {
+    if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y3) && ybola <=(y3 + 25)) {
       velybola = velybola * -1;
       est36 = 0;
     }
   }
     //b7
   if ( est37 == 1){
-    if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y3 + 15) && ybola <=(y3 + 25)) {
+    if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y3) && ybola <=(y3 + 25)) {
       velybola = velybola * -1;
       est37 = 0;
     }
@@ -524,49 +524,49 @@ function colisionladrillos() {
 //colision fila4
 //colision bloque1
    if ( est41 == 1){
-    if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y4 + 15) && ybola <=(y4 + 25)) {
+    if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y4) && ybola <=(y4 + 25)) {
       velybola = velybola * -1;
       est41 = 0;
     }
   }
     //b2
   if ( est42 == 1){
-    if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y4 + 15) && ybola <=(y4 + 25)) {
+    if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y4) && ybola <=(y4 + 25)) {
       velybola = velybola * -1;
       est42 = 0;
     }
   }
     //b3
   if ( est43 == 1){
-    if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y4 + 15) && ybola <=(y4 + 25)) {
+    if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y4) && ybola <=(y4 + 25)) {
       velybola = velybola * -1;
       est43 = 0;
     }
   }
     //b4
   if ( est44 == 1){
-    if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y4 + 15) && ybola <=(y4 + 25)) {
+    if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y4) && ybola <=(y4 + 25)) {
       velybola = velybola * -1;
       est44 = 0;
     }
   }
     //b5
   if ( est45 == 1){
-    if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y4 + 15) && ybola <=(y4 + 25)) {
+    if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y4) && ybola <=(y4 + 25)) {
       velybola = velybola * -1;
       est45 = 0;
     }
   }
     //b6
   if ( est46 == 1){
-    if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y4 + 15) && ybola <=(y4 + 25)) {
+    if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y4) && ybola <=(y4 + 25)) {
       velybola = velybola * -1;
       est46 = 0;
     }
   }
     //b7
   if ( est47 == 1){
-    if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y4 + 15) && ybola <=(y4 + 25)) {
+    if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y4) && ybola <=(y4 + 25)) {
       velybola = velybola * -1;
       est47 = 0;
     }

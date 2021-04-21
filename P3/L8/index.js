@@ -2,10 +2,11 @@ console.log("Ejecutando JS...");
 
 const canvas = document.getElementById("canvas");
 
+const lost_sound = new Audio('lost.mp3');
+
 //-- Definir el tamaño del canvas
 canvas.width = 600;
 canvas.height = 900;
-
 //-- Obtener el contexto del canvas
 const ctx = canvas.getContext("2d");
 let xcanvas = 590;
@@ -611,6 +612,8 @@ function update()
   if (ybola > 900){
     estado = ESTADO.INIT;
     vidas = vidas -1;
+    lost_sound.currentTime = 0;
+    lost_sound.play();
   }
 }
     

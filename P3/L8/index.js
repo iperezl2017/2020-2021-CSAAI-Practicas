@@ -46,7 +46,8 @@ const ESTADO = {
 let estado = ESTADO.INIT
 //Contador
 let contadorpuntos = 0;
-//Estado ladrillos
+//Estados ladrillos
+//Estados fila1
 let est11 = 1;
 let est12 = 1;
 let est13 = 1;
@@ -54,8 +55,30 @@ let est14 = 1;
 let est15 = 1;
 let est16 = 1;
 let est17 = 1;
-
-
+//Estados fila2
+let est21 = 1;
+let est22 = 1;
+let est23 = 1;
+let est24 = 1;
+let est25 = 1;
+let est26 = 1;
+let est27 = 1;
+//Estados fila3
+let est31 = 1;
+let est32 = 1;
+let est33 = 1;
+let est34 = 1;
+let est35 = 1;
+let est36 = 1;
+let est37 = 1;
+//Estados fila4
+let est41 = 1;
+let est42 = 1;
+let est43 = 1;
+let est44 = 1;
+let est45 = 1;
+let est46 = 1;
+let est47 = 1;
 //Funciones
 function play (){
   myAudio.muted = "false";
@@ -98,7 +121,6 @@ if (est11 == 1){
    ctx.stroke()
  ctx.closePath();
 }
-
    //rect2
 if (est12 == 1){
   ctx.beginPath();
@@ -108,7 +130,6 @@ if (est12 == 1){
    ctx.stroke()
  ctx.closePath();
 }
-
    //rect3
 if (est13 == 1){
   ctx.beginPath();
@@ -118,7 +139,6 @@ if (est13 == 1){
    ctx.stroke()
  ctx.closePath();
 }
-
   //rect4
 if (est14 == 1){
   ctx.beginPath();
@@ -128,7 +148,6 @@ if (est14 == 1){
     ctx.stroke()
   ctx.closePath();
 }
-
   //rect5
 if (est15 == 1){
   ctx.beginPath();
@@ -138,7 +157,6 @@ if (est15 == 1){
     ctx.stroke()
   ctx.closePath();
 }
-
   //rect6
 if (est16 == 1){
   ctx.beginPath();
@@ -148,7 +166,6 @@ if (est16 == 1){
     ctx.stroke()
   ctx.closePath();
 }
-
   //rect7
 if (est17 == 1){
   ctx.beginPath();
@@ -158,174 +175,192 @@ if (est17 == 1){
     ctx.stroke()
   ctx.closePath();
 }
-
  //2fila
-
   //rect1
+if (est21 == 1){
   ctx.beginPath();
    ctx.rect(x1,y2,50,25);
    ctx.fillStyle = 'red';
    ctx.fill();
    ctx.stroke()
  ctx.closePath();
-
+}
    //rect2
+if (est22 == 1){
   ctx.beginPath();
    ctx.rect(x2,y2,50,25);
    ctx.fillStyle = 'yellow';
    ctx.fill();
    ctx.stroke()
  ctx.closePath();
-
+}
    //rect3
+if (est23 == 1){
   ctx.beginPath();
    ctx.rect(x3,y2,50,25);
    ctx.fillStyle = 'green';
    ctx.fill();
    ctx.stroke()
  ctx.closePath();
-
+}
   //rect4
+if (est24 == 1){
   ctx.beginPath();
     ctx.rect(x4,y2,50,25);
     ctx.fillStyle = 'blue';
     ctx.fill();
     ctx.stroke()
   ctx.closePath();
-
+}
   //rect5
+if (est25 == 1){
   ctx.beginPath();
     ctx.rect(x5,y2,50,25);
     ctx.fillStyle = 'red';
     ctx.fill();
     ctx.stroke()
   ctx.closePath();
-
+}
   //rect6
+if (est26 == 1){
   ctx.beginPath();
     ctx.rect(x6,y2,50,25);
     ctx.fillStyle = 'yellow';
     ctx.fill();
     ctx.stroke()
   ctx.closePath();
-
+}
   //rect7
+if (est27 == 1){
   ctx.beginPath();
     ctx.rect(x7,y2,50,25);
     ctx.fillStyle = 'green';
     ctx.fill();
     ctx.stroke()
   ctx.closePath();
-
+}
  //3fila
-
-   //rect1
+  //rect1
+if (est31 == 1){
   ctx.beginPath();
    ctx.rect(x1,y3,50,25);
    ctx.fillStyle = 'yellow';
    ctx.fill();
    ctx.stroke()
  ctx.closePath();
-
+}
    //rect2
+if (est32 == 1){
   ctx.beginPath();
    ctx.rect(x2,y3,50,25);
    ctx.fillStyle = 'green';
    ctx.fill();
    ctx.stroke()
  ctx.closePath();
-
+}
    //rect3
+if (est33 == 1){
   ctx.beginPath();
    ctx.rect(x3,y3,50,25);
    ctx.fillStyle = 'blue';
    ctx.fill();
    ctx.stroke()
  ctx.closePath();
-
+}
   //rect4
+if (est34 == 1){
   ctx.beginPath();
     ctx.rect(x4,y3,50,25);
     ctx.fillStyle = 'red';
     ctx.fill();
     ctx.stroke()
   ctx.closePath();
-
+}
   //rect5
+if (est35 == 1){
   ctx.beginPath();
     ctx.rect(x5,y3,50,25);
     ctx.fillStyle = 'yellow';
     ctx.fill();
     ctx.stroke()
   ctx.closePath();
-
+}
   //rect6
+if (est36 == 1){
   ctx.beginPath();
     ctx.rect(x6,y3,50,25);
     ctx.fillStyle = 'green';
     ctx.fill();
     ctx.stroke()
   ctx.closePath();
-
+}
   //rect7
+if (est37 == 1){
   ctx.beginPath();
     ctx.rect(x7,y3,50,25);
     ctx.fillStyle = 'blue';
     ctx.fill();
     ctx.stroke()
   ctx.closePath();
+}
 
  //4fila
-
   //rect1
+if (est41 == 1){
   ctx.beginPath();
    ctx.rect(x1,y4,50,25);
    ctx.fillStyle = 'green';
    ctx.fill();
    ctx.stroke()
  ctx.closePath();
-
+}
    //rect2
+if (est42 == 1){
   ctx.beginPath();
    ctx.rect(x2,y4,50,25);
    ctx.fillStyle = 'blue';
    ctx.fill();
    ctx.stroke()
  ctx.closePath();
-
+}
    //rect3
+if (est43 == 1){
   ctx.beginPath();
    ctx.rect(x3,y4,50,25);
    ctx.fillStyle = 'red';
    ctx.fill();
    ctx.stroke()
  ctx.closePath();
-
+}
   //rect4
+if (est44 == 1){
   ctx.beginPath();
     ctx.rect(x4,y4,50,25);
     ctx.fillStyle = 'yellow';
     ctx.fill();
     ctx.stroke()
   ctx.closePath();
-
+}
   //rect5
+if (est45 == 1){
   ctx.beginPath();
     ctx.rect(x5,y4,50,25);
     ctx.fillStyle = 'green';
     ctx.fill();
     ctx.stroke()
   ctx.closePath();
-
+}
   //rect6
+if (est46 == 1){
   ctx.beginPath();
     ctx.rect(x6,y4,50,25);
     ctx.fillStyle = 'blue';
     ctx.fill();
     ctx.stroke()
   ctx.closePath();
-
+}
   //rect7
+if (est47 == 1){
   ctx.beginPath();
     ctx.rect(x7,y4,50,25);
     ctx.fillStyle = 'red';
@@ -333,11 +368,214 @@ if (est17 == 1){
     ctx.stroke()
   ctx.closePath();
 }
+}
+
+function colisionladrillos() {
+//colision fila1
+//colision bloque1
+  if ( est11 == 1){
+    if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
+      velybola = velybola * -1;
+      est11 = 0;
+    }
+  }
+    //b2
+  if ( est12 == 1){
+    if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
+      velybola = velybola * -1;
+      est12 = 0;
+    }
+  }
+    //b3
+  if ( est13 == 1){
+    if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
+      velybola = velybola * -1;
+      est13 = 0;
+    }
+  }
+    //b4
+  if ( est14 == 1){
+    if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
+      velybola = velybola * -1;
+      est14 = 0;
+    }
+  }
+    //b5
+  if ( est15 == 1){
+    if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
+      velybola = velybola * -1;
+      est15 = 0;
+    }
+  }
+    //b6
+  if ( est16 == 1){
+    if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
+      velybola = velybola * -1;
+      est16 = 0;
+    }
+  }
+    //b7
+  if ( est17 == 1){
+    if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
+      velybola = velybola * -1;
+      est17 = 0;
+    }
+  }
+//colision fila2
+//colision bloque1
+  if ( est21 == 1){
+    if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y2 + 15) && ybola <=(y2 + 25)) {
+      velybola = velybola * -1;
+      est21 = 0;
+    }
+  }
+    //b2
+  if ( est22 == 1){
+    if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y2 + 15) && ybola <=(y2 + 25)) {
+      velybola = velybola * -1;
+      est22 = 0;
+    }
+  }
+    //b3
+  if ( est23 == 1){
+    if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y2 + 15) && ybola <=(y2 + 25)) {
+      velybola = velybola * -1;
+      est23 = 0;
+    }
+  }
+    //b4
+  if ( est24 == 1){
+    if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y2 + 15) && ybola <=(y2 + 25)) {
+      velybola = velybola * -1;
+      est24 = 0;
+    }
+  }
+    //b5
+  if ( est25 == 1){
+    if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y2 + 15) && ybola <=(y2 + 25)) {
+      velybola = velybola * -1;
+      est25 = 0;
+    }
+  }
+    //b6
+  if ( est26 == 1){
+    if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y2 + 15) && ybola <=(y2 + 25)) {
+      velybola = velybola * -1;
+      est26 = 0;
+    }
+  }
+    //b7
+  if ( est27 == 1){
+    if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y2 + 15) && ybola <=(y2 + 25)) {
+      velybola = velybola * -1;
+      est27 = 0;
+    }
+  }
+//colision fila3
+//colision bloque1
+  if ( est31 == 1){
+    if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y3 + 15) && ybola <=(y3 + 25)) {
+      velybola = velybola * -1;
+      est31 = 0;
+    }
+  }
+    //b2
+  if ( est32 == 1){
+    if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y3 + 15) && ybola <=(y3 + 25)) {
+      velybola = velybola * -1;
+      est32 = 0;
+    }
+  }
+    //b3
+  if ( est33 == 1){
+    if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y3 + 15) && ybola <=(y3 + 25)) {
+      velybola = velybola * -1;
+      est33 = 0;
+    }
+  }
+    //b4
+  if ( est34 == 1){
+    if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y3 + 15) && ybola <=(y3 + 25)) {
+      velybola = velybola * -1;
+      est34 = 0;
+    }
+  }
+    //b5
+  if ( est35 == 1){
+    if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y3 + 15) && ybola <=(y3 + 25)) {
+      velybola = velybola * -1;
+      est35 = 0;
+    }
+  }
+    //b6
+  if ( est36 == 1){
+    if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y3 + 15) && ybola <=(y3 + 25)) {
+      velybola = velybola * -1;
+      est36 = 0;
+    }
+  }
+    //b7
+  if ( est37 == 1){
+    if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y3 + 15) && ybola <=(y3 + 25)) {
+      velybola = velybola * -1;
+      est37 = 0;
+    }
+  }
+//colision fila4
+//colision bloque1
+   if ( est41 == 1){
+    if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y4 + 15) && ybola <=(y4 + 25)) {
+      velybola = velybola * -1;
+      est41 = 0;
+    }
+  }
+    //b2
+  if ( est42 == 1){
+    if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y4 + 15) && ybola <=(y4 + 25)) {
+      velybola = velybola * -1;
+      est42 = 0;
+    }
+  }
+    //b3
+  if ( est43 == 1){
+    if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y4 + 15) && ybola <=(y4 + 25)) {
+      velybola = velybola * -1;
+      est43 = 0;
+    }
+  }
+    //b4
+  if ( est44 == 1){
+    if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y4 + 15) && ybola <=(y4 + 25)) {
+      velybola = velybola * -1;
+      est44 = 0;
+    }
+  }
+    //b5
+  if ( est45 == 1){
+    if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y4 + 15) && ybola <=(y4 + 25)) {
+      velybola = velybola * -1;
+      est45 = 0;
+    }
+  }
+    //b6
+  if ( est46 == 1){
+    if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y4 + 15) && ybola <=(y4 + 25)) {
+      velybola = velybola * -1;
+      est46 = 0;
+    }
+  }
+    //b7
+  if ( est47 == 1){
+    if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y4 + 15) && ybola <=(y4 + 25)) {
+      velybola = velybola * -1;
+      est47 = 0;
+    }
+  }
+}
 
 function update() 
 {
   console.log("test");
-  console.log(est12);
 
   if (estado == ESTADO.JUGANDO){
 
@@ -360,48 +598,10 @@ function update()
     velybola = velybola * -1;
     velxbola = velxbola * 1;
   }
-  //colision bloque1
-  if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
-    velybola = velybola * -1;
-    est11 = 0;
-    console.log("colision1");
-  }
-  //b2
-  if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
-    velybola = velybola * -1;
-    est12 = 0;
-    console.log(est12);
-  }
-  //b3
-  if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
-    velybola = velybola * -1;
-    est13 = 0;
-    console.log("colision3");
-  }
-  //b4
-  if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
-    velybola = velybola * -1;
-    est14 = 0;
-    console.log("colision4");
-  }
-  //b5
-  if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
-    velybola = velybola * -1;
-    est15 = 0;
-    console.log("colision5");
-  }
-  //b6
-  if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
-    velybola = velybola * -1;
-    est16 = 0;
-    console.log("colision6");
-  }
-  //b7
-  if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
-    velybola = velybola * -1;
-    est17 = 0;
-    console.log("colision7");
-  }
+ 
+  colisionladrillos();
+
+  //Limites raqueta
   if (xRaqueta < 0) {
     xRaqueta = 0;
   }

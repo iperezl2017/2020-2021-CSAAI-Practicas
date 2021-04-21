@@ -28,7 +28,6 @@ let x4 = 280;
 let x5 = 360;
 let x6 = 440;
 let x7= 520;
-let x8 = 600;
 let y1 = 200;
 let y2 = 150;
 let y3 = 100;
@@ -55,7 +54,7 @@ let est14 = 1;
 let est15 = 1;
 let est16 = 1;
 let est17 = 1;
-let est18 = 1;
+
 
 //Funciones
 function play (){
@@ -88,70 +87,77 @@ ctx.closePath();
 
 //Dibujar ladrillos
 function drawladrillos(){
+
 //fila1
    //rect1
+if (est11 == 1){
   ctx.beginPath();
    ctx.rect(x1,y1,50,25);
    ctx.fillStyle = 'blue';
    ctx.fill();
    ctx.stroke()
  ctx.closePath();
+}
 
    //rect2
+if (est12 == 1){
   ctx.beginPath();
    ctx.rect(x2,y1,50,25);
    ctx.fillStyle = 'red';
    ctx.fill();
    ctx.stroke()
  ctx.closePath();
+}
 
    //rect3
+if (est13 == 1){
   ctx.beginPath();
    ctx.rect(x3,y1,50,25);
    ctx.fillStyle = 'yellow';
    ctx.fill();
    ctx.stroke()
  ctx.closePath();
+}
 
   //rect4
+if (est14 == 1){
   ctx.beginPath();
     ctx.rect(x4,y1,50,25);
     ctx.fillStyle = 'green';
     ctx.fill();
     ctx.stroke()
   ctx.closePath();
+}
 
   //rect5
+if (est15 == 1){
   ctx.beginPath();
     ctx.rect(x5,y1,50,25);
     ctx.fillStyle = 'blue';
     ctx.fill();
     ctx.stroke()
   ctx.closePath();
+}
 
   //rect6
+if (est16 == 1){
   ctx.beginPath();
     ctx.rect(x6,y1,50,25);
     ctx.fillStyle = 'red';
     ctx.fill();
     ctx.stroke()
   ctx.closePath();
+}
 
   //rect7
+if (est17 == 1){
   ctx.beginPath();
     ctx.rect(x7,y1,50,25);
     ctx.fillStyle = 'yellow';
     ctx.fill();
     ctx.stroke()
   ctx.closePath();
-
-  //rect8
-  ctx.beginPath();
-    ctx.rect(x8,y1,50,25);
-    ctx.fillStyle = 'green';
-    ctx.fill();
-    ctx.stroke()
-  ctx.closePath();
+}
 
  //2fila
 
@@ -211,18 +217,10 @@ function drawladrillos(){
     ctx.stroke()
   ctx.closePath();
 
-  //rect8
-  ctx.beginPath();
-    ctx.rect(x8,y2,50,25);
-    ctx.fillStyle = 'blue';
-    ctx.fill();
-    ctx.stroke()
-  ctx.closePath();
-
  //3fila
 
    //rect1
-   ctx.beginPath();
+  ctx.beginPath();
    ctx.rect(x1,y3,50,25);
    ctx.fillStyle = 'yellow';
    ctx.fill();
@@ -273,14 +271,6 @@ function drawladrillos(){
   ctx.beginPath();
     ctx.rect(x7,y3,50,25);
     ctx.fillStyle = 'blue';
-    ctx.fill();
-    ctx.stroke()
-  ctx.closePath();
-
-  //rect8
-  ctx.beginPath();
-    ctx.rect(x8,y3,50,25);
-    ctx.fillStyle = 'red';
     ctx.fill();
     ctx.stroke()
   ctx.closePath();
@@ -342,50 +332,12 @@ function drawladrillos(){
     ctx.fill();
     ctx.stroke()
   ctx.closePath();
-
-  //rect8
-  ctx.beginPath();
-    ctx.rect(x8,y4,50,25);
-    ctx.fillStyle = 'yellow';
-    ctx.fill();
-    ctx.stroke()
-  ctx.closePath();
-
-}
-
-function borrarladrillos(){
-
-  if (est11 = 0) {
-    ctx.clearRect(x1, y1, 50, 25);
-  }
-  if (est12 = 0) {
-    ctx.clearRect(x2, y1, 50, 25);
-  }
-  if (est13 = 0) {
-    ctx.clearRect(x3, y1, 50, 25);
-  }
-  if (est14 = 0) {
-    ctx.clearRect(x4, y1, 50, 25);
-  }
-  if (est15 = 0) {
-    ctx.clearRect(x5, y1, 50, 25);
-  }
-  if (est16 = 0) {
-    ctx.clearRect(x6, y1, 50, 25);
-  }
-  if (est17 = 0) {
-    ctx.clearRect(x7, y1, 50, 25);
-  }
-  if (est18 = 0) {
-    ctx.clearRect(x8, y1, 50, 25);
-  }
-  
-  
 }
 
 function update() 
 {
   console.log("test");
+  console.log(est12);
 
   if (estado == ESTADO.JUGANDO){
 
@@ -412,41 +364,43 @@ function update()
   if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
     est11 = 0;
+    console.log("colision1");
   }
   //b2
   if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
     est12 = 0;
+    console.log(est12);
   }
   //b3
   if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
     est13 = 0;
+    console.log("colision3");
   }
   //b4
   if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
     est14 = 0;
+    console.log("colision4");
   }
   //b5
   if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
     est15 = 0;
+    console.log("colision5");
   }
   //b6
   if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
     est16 = 0;
+    console.log("colision6");
   }
   //b7
   if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
     velybola = velybola * -1;
     est17 = 0;
-  }
-  //b8
-  if (xbola >= x8 && xbola <=(x8 + 50) && ybola >= (y1 + 15) && ybola <=(y1 + 25)) {
-    velybola = velybola * -1;
-    est18 = 0;
+    console.log("colision7");
   }
   if (xRaqueta < 0) {
     xRaqueta = 0;
@@ -466,7 +420,6 @@ function update()
   drawbola();
   drawraqueta();
   drawladrillos();
-
 
   if ( estado == ESTADO.INIT)
   {   

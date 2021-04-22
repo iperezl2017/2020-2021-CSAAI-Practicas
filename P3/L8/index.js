@@ -635,6 +635,50 @@ function colisionladrillos() {
     }
   }
 }
+
+function hp(){
+  ctx.font = "25px Arial";
+  ctx.fillStyle = 'red'
+  ctx.fillText(vidas, 550, 890);
+}
+function gameover(){
+  if (estado == ESTADO.FIN){
+      est11 = 1;
+      est12 = 1;
+      est13 = 1;
+      est14 = 1;
+      est15 = 1;
+      est16 = 1;
+      est17 = 1;
+      est21 = 1;
+      est22 = 1;
+      est23 = 1;
+      est24 = 1;
+      est25 = 1;
+      est26 = 1;
+      est27 = 1;
+      est31 = 1;
+      est32 = 1;
+      est33 = 1;
+      est34 = 1;
+      est35 = 1;
+      est36 = 1;
+      est37 = 1;
+      est41 = 1;
+      est42 = 1;
+      est43 = 1;
+      est44 = 1;
+      est45 = 1;
+      est46 = 1;
+      est47 = 1;
+      estado == ESTADO.INIT;
+      vidas = 3;
+      ctx.strokeStyle = 'RED';
+      ctx.font = "Lazer84.ttf";
+      ctx.strokeText("GAME OVER", 225, 700);
+  }
+}
+
 function update() 
 {
   console.log("test");
@@ -681,6 +725,9 @@ function update()
     vidas = vidas -1;
     lost_sound.currentTime = 0;
     lost_sound.play();
+    if (vidas == 0){
+      estado = ESTADO.FIN;
+    }
   }
 }
     
@@ -690,6 +737,8 @@ function update()
   drawbola();
   drawraqueta();
   drawladrillos();
+  hp();
+  gameover();
 
   if ( estado == ESTADO.INIT)
   {   

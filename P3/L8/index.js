@@ -49,6 +49,7 @@ const ESTADO = {
   BEGIN: 1,
   JUGANDO : 2,
   FIN : 4,
+  WIN : 5
 }
 let estado = ESTADO.INIT
 //Contador
@@ -675,8 +676,18 @@ function score() {
   ctx.fillStyle = 'yellow'
   ctx.fillText("Score", 20, 800);
   ctx.fillText(puntos, 45, 840);
-
 }
+function textowin(){
+  ctx.font = "Lazer84.ttf";
+  ctx.fillStyle = 'RED';
+  ctx.fillText("YOU WIN", 250, 700);
+}
+function textogameover(){
+  ctx.font = "Lazer84.ttf";
+  ctx.fillStyle = 'RED';
+  ctx.fillText("GAME OVER", 225, 700);
+}
+
 function gameover(){
   if (estado == ESTADO.FIN){
       est11 = 1;
@@ -707,20 +718,14 @@ function gameover(){
       est45 = 1;
       est46 = 1;
       est47 = 1;
-      vidas = 4;
+      vidas = 3;
       puntos = 0;
-      estado == ESTADO.INIT;
-      ctx.strokeStyle = 'RED';
-      ctx.font = "Lazer84.ttf";
-      ctx.strokeText("GAME OVER", 225, 700);
+      estado = ESTADO.INIT;
   }
 }
 function win(){
-  if (puntos == 76 || puntos == 152){
-    win_sound.currentTime = 0;
-    win_sound.play();
-  }
-  if (puntos == 77 || puntos == 154){ 
+ 
+  if (estado == ESTADO.WIN){
     est11 = 1;
     est12 = 1;
     est13 = 1;
@@ -749,13 +754,9 @@ function win(){
     est45 = 1;
     est46 = 1;
     est47 = 1;
-    estado == ESTADO.INIT;
-    console.log(estado);
-    ctx.strokeStyle = 'RED';
-    ctx.font = "Lazer84.ttf";
-    ctx.strokeText("YOU WIN", 250, 700);
+    puntos = puntos + 10;
+    estado = ESTADO.INIT;
   }
-
 }
 
 function update() 
@@ -789,9 +790,15 @@ function update()
     raqueta_sound.currentTime = 0;
     raqueta_sound.play();
   }
- 
+
   colisionladrillos();
 
+  if(puntos == 77){
+    estado = ESTADO.WIN;
+    win_sound.currentTime = 0;
+    win_sound.play();
+    setTimeout(textowin(),2000);
+  }
   //Limites raqueta
   if (xRaqueta < 0) {
     xRaqueta = 0;
@@ -806,10 +813,10 @@ function update()
     lost_sound.play();
     if (vidas == 0){
       estado = ESTADO.FIN;
+      setTimeout(textogameover(),2000);
     }
   }
 }
-    
 
   //-- 2) Borrar el canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);

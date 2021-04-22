@@ -2,7 +2,13 @@ console.log("Ejecutando JS...");
 
 const canvas = document.getElementById("canvas");
 
+//Sonidos
 const lost_sound = new Audio('lost.mp3');
+const win_sound = new Audio("win.mp3");
+const romperbloque_sound = new Audio("romperbloque.mp3");
+const puntos_sound = new Audio("conseguirpuntos.mp3");
+const pared_sound = new Audio("pared.mp3");
+const raqueta_sound = new Audio("raqueta.mp3");
 
 //-- Definir el tamaño del canvas
 canvas.width = 600;
@@ -21,7 +27,7 @@ let velybola = -3;
 //Raqueta
 let xRaqueta = 250;
 let yRaqueta = 875;
-//Bricks f1
+//Bricks
 let x1 = 40;
 let x2 = 120;
 let x3 = 200;
@@ -378,6 +384,8 @@ function colisionladrillos() {
     if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y1) && ybola <=(y1 + 25)) {
       velybola = velybola * -1;
       est11 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b2
@@ -385,6 +393,8 @@ function colisionladrillos() {
     if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y1) && ybola <=(y1 + 25)) {
       velybola = velybola * -1;
       est12 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b3
@@ -392,6 +402,8 @@ function colisionladrillos() {
     if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y1) && ybola <=(y1 + 25)) {
       velybola = velybola * -1;
       est13 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b4
@@ -399,6 +411,8 @@ function colisionladrillos() {
     if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y1) && ybola <=(y1 + 25)) {
       velybola = velybola * -1;
       est14 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b5
@@ -406,6 +420,8 @@ function colisionladrillos() {
     if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y1) && ybola <=(y1 + 25)) {
       velybola = velybola * -1;
       est15 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b6
@@ -413,6 +429,8 @@ function colisionladrillos() {
     if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y1) && ybola <=(y1 + 25)) {
       velybola = velybola * -1;
       est16 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b7
@@ -420,6 +438,8 @@ function colisionladrillos() {
     if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y1) && ybola <=(y1 + 25)) {
       velybola = velybola * -1;
       est17 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
 //colision fila2
@@ -428,6 +448,8 @@ function colisionladrillos() {
     if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y2) && ybola <=(y2 + 25)) {
       velybola = velybola * -1;
       est21 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b2
@@ -435,6 +457,8 @@ function colisionladrillos() {
     if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y2) && ybola <=(y2 + 25)) {
       velybola = velybola * -1;
       est22 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b3
@@ -442,6 +466,8 @@ function colisionladrillos() {
     if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y2) && ybola <=(y2 + 25)) {
       velybola = velybola * -1;
       est23 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b4
@@ -449,6 +475,8 @@ function colisionladrillos() {
     if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y2) && ybola <=(y2 + 25)) {
       velybola = velybola * -1;
       est24 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b5
@@ -456,6 +484,8 @@ function colisionladrillos() {
     if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y2) && ybola <=(y2 + 25)) {
       velybola = velybola * -1;
       est25 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b6
@@ -463,6 +493,8 @@ function colisionladrillos() {
     if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y2) && ybola <=(y2 + 25)) {
       velybola = velybola * -1;
       est26 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b7
@@ -470,6 +502,8 @@ function colisionladrillos() {
     if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y2) && ybola <=(y2 + 25)) {
       velybola = velybola * -1;
       est27 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
 //colision fila3
@@ -478,6 +512,8 @@ function colisionladrillos() {
     if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y3) && ybola <=(y3 + 25)) {
       velybola = velybola * -1;
       est31 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b2
@@ -485,6 +521,8 @@ function colisionladrillos() {
     if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y3) && ybola <=(y3 + 25)) {
       velybola = velybola * -1;
       est32 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b3
@@ -492,6 +530,8 @@ function colisionladrillos() {
     if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y3) && ybola <=(y3 + 25)) {
       velybola = velybola * -1;
       est33 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b4
@@ -499,6 +539,8 @@ function colisionladrillos() {
     if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y3) && ybola <=(y3 + 25)) {
       velybola = velybola * -1;
       est34 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b5
@@ -506,6 +548,8 @@ function colisionladrillos() {
     if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y3) && ybola <=(y3 + 25)) {
       velybola = velybola * -1;
       est35 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b6
@@ -513,6 +557,8 @@ function colisionladrillos() {
     if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y3) && ybola <=(y3 + 25)) {
       velybola = velybola * -1;
       est36 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b7
@@ -520,6 +566,8 @@ function colisionladrillos() {
     if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y3) && ybola <=(y3 + 25)) {
       velybola = velybola * -1;
       est37 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
 //colision fila4
@@ -528,6 +576,8 @@ function colisionladrillos() {
     if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y4) && ybola <=(y4 + 25)) {
       velybola = velybola * -1;
       est41 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b2
@@ -535,6 +585,8 @@ function colisionladrillos() {
     if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y4) && ybola <=(y4 + 25)) {
       velybola = velybola * -1;
       est42 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b3
@@ -542,6 +594,8 @@ function colisionladrillos() {
     if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y4) && ybola <=(y4 + 25)) {
       velybola = velybola * -1;
       est43 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b4
@@ -549,6 +603,8 @@ function colisionladrillos() {
     if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y4) && ybola <=(y4 + 25)) {
       velybola = velybola * -1;
       est44 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b5
@@ -556,6 +612,8 @@ function colisionladrillos() {
     if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y4) && ybola <=(y4 + 25)) {
       velybola = velybola * -1;
       est45 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b6
@@ -563,6 +621,8 @@ function colisionladrillos() {
     if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y4) && ybola <=(y4 + 25)) {
       velybola = velybola * -1;
       est46 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
     //b7
@@ -570,10 +630,11 @@ function colisionladrillos() {
     if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y4) && ybola <=(y4 + 25)) {
       velybola = velybola * -1;
       est47 = 0;
+      romperbloque_sound.currentTime = 1.1;
+      romperbloque_sound.play();
     }
   }
 }
-
 function update() 
 {
   console.log("test");
@@ -587,9 +648,13 @@ function update()
 
   if (xbola < 0 || xbola >= xcanvas) {
     velxbola = -velxbola;
+    pared_sound.currentTime = 0;
+    pared_sound.play();
   }
   if (ybola < 0) {
     velybola = -velybola;
+    pared_sound.currentTime = 0;
+    pared_sound.play();
   }
 
   xbola = xbola + velxbola;
@@ -598,6 +663,8 @@ function update()
   if (xbola >= xRaqueta && xbola <=(xRaqueta + 100) && ybola >= (yRaqueta - 15) && ybola <=(yRaqueta + 25)) {
     velybola = velybola * -1;
     velxbola = velxbola * 1;
+    raqueta_sound.currentTime = 0;
+    raqueta_sound.play();
   }
  
   colisionladrillos();
@@ -630,6 +697,8 @@ function update()
       ybola = 850;
       velybola = 0;
       velxbola = 0;
+      xRaqueta = 250;
+      yRaqueta = 875;
     }
  
   //-- 4) Volver a ejecutar update cuando toque

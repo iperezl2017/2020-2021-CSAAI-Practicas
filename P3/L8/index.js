@@ -52,7 +52,7 @@ const ESTADO = {
 }
 let estado = ESTADO.INIT
 //Contador
-let contadorpuntos = 0;
+let puntos = 75;
 //Estados ladrillos
 //Estados fila1
 let est11 = 1;
@@ -384,6 +384,7 @@ function colisionladrillos() {
     if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y1) && ybola <=(y1 + 25)) {
       velybola = velybola * -1;
       est11 = 0;
+      puntos = puntos + 1;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -393,6 +394,7 @@ function colisionladrillos() {
     if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y1) && ybola <=(y1 + 25)) {
       velybola = velybola * -1;
       est12 = 0;
+      puntos = puntos + 1;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -402,6 +404,7 @@ function colisionladrillos() {
     if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y1) && ybola <=(y1 + 25)) {
       velybola = velybola * -1;
       est13 = 0;
+      puntos = puntos + 1;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -411,6 +414,7 @@ function colisionladrillos() {
     if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y1) && ybola <=(y1 + 25)) {
       velybola = velybola * -1;
       est14 = 0;
+      puntos = puntos + 1;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -420,6 +424,7 @@ function colisionladrillos() {
     if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y1) && ybola <=(y1 + 25)) {
       velybola = velybola * -1;
       est15 = 0;
+      puntos = puntos + 1;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -429,6 +434,7 @@ function colisionladrillos() {
     if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y1) && ybola <=(y1 + 25)) {
       velybola = velybola * -1;
       est16 = 0;
+      puntos = puntos + 1;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -438,6 +444,7 @@ function colisionladrillos() {
     if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y1) && ybola <=(y1 + 25)) {
       velybola = velybola * -1;
       est17 = 0;
+      puntos = puntos + 1;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -448,6 +455,7 @@ function colisionladrillos() {
     if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y2) && ybola <=(y2 + 25)) {
       velybola = velybola * -1;
       est21 = 0;
+      puntos = puntos + 2;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -457,6 +465,7 @@ function colisionladrillos() {
     if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y2) && ybola <=(y2 + 25)) {
       velybola = velybola * -1;
       est22 = 0;
+      puntos = puntos + 2;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -466,6 +475,7 @@ function colisionladrillos() {
     if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y2) && ybola <=(y2 + 25)) {
       velybola = velybola * -1;
       est23 = 0;
+      puntos = puntos + 2;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -475,6 +485,7 @@ function colisionladrillos() {
     if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y2) && ybola <=(y2 + 25)) {
       velybola = velybola * -1;
       est24 = 0;
+      puntos = puntos + 2;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -484,6 +495,7 @@ function colisionladrillos() {
     if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y2) && ybola <=(y2 + 25)) {
       velybola = velybola * -1;
       est25 = 0;
+      puntos = puntos + 2;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -493,6 +505,7 @@ function colisionladrillos() {
     if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y2) && ybola <=(y2 + 25)) {
       velybola = velybola * -1;
       est26 = 0;
+      puntos = puntos + 2;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -502,6 +515,7 @@ function colisionladrillos() {
     if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y2) && ybola <=(y2 + 25)) {
       velybola = velybola * -1;
       est27 = 0;
+      puntos = puntos + 2;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -512,6 +526,7 @@ function colisionladrillos() {
     if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y3) && ybola <=(y3 + 25)) {
       velybola = velybola * -1;
       est31 = 0;
+      puntos = puntos + 3;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -521,6 +536,7 @@ function colisionladrillos() {
     if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y3) && ybola <=(y3 + 25)) {
       velybola = velybola * -1;
       est32 = 0;
+      puntos = puntos + 3;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -530,6 +546,7 @@ function colisionladrillos() {
     if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y3) && ybola <=(y3 + 25)) {
       velybola = velybola * -1;
       est33 = 0;
+      puntos = puntos + 3;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -539,6 +556,7 @@ function colisionladrillos() {
     if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y3) && ybola <=(y3 + 25)) {
       velybola = velybola * -1;
       est34 = 0;
+      puntos = puntos + 3;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -548,6 +566,7 @@ function colisionladrillos() {
     if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y3) && ybola <=(y3 + 25)) {
       velybola = velybola * -1;
       est35 = 0;
+      puntos = puntos + 3;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -557,6 +576,7 @@ function colisionladrillos() {
     if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y3) && ybola <=(y3 + 25)) {
       velybola = velybola * -1;
       est36 = 0;
+      puntos = puntos + 3;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -566,6 +586,7 @@ function colisionladrillos() {
     if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y3) && ybola <=(y3 + 25)) {
       velybola = velybola * -1;
       est37 = 0;
+      puntos = puntos + 3;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -576,6 +597,7 @@ function colisionladrillos() {
     if (xbola >= x1 && xbola <=(x1 + 50) && ybola >= (y4) && ybola <=(y4 + 25)) {
       velybola = velybola * -1;
       est41 = 0;
+      puntos = puntos + 5;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -585,6 +607,7 @@ function colisionladrillos() {
     if (xbola >= x2 && xbola <=(x2 + 50) && ybola >= (y4) && ybola <=(y4 + 25)) {
       velybola = velybola * -1;
       est42 = 0;
+      puntos = puntos + 5;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -594,6 +617,7 @@ function colisionladrillos() {
     if (xbola >= x3 && xbola <=(x3 + 50) && ybola >= (y4) && ybola <=(y4 + 25)) {
       velybola = velybola * -1;
       est43 = 0;
+      puntos = puntos + 5;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -603,6 +627,7 @@ function colisionladrillos() {
     if (xbola >= x4 && xbola <=(x4 + 50) && ybola >= (y4) && ybola <=(y4 + 25)) {
       velybola = velybola * -1;
       est44 = 0;
+      puntos = puntos + 5;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -612,6 +637,7 @@ function colisionladrillos() {
     if (xbola >= x5 && xbola <=(x5 + 50) && ybola >= (y4) && ybola <=(y4 + 25)) {
       velybola = velybola * -1;
       est45 = 0;
+      puntos = puntos + 5;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -621,6 +647,7 @@ function colisionladrillos() {
     if (xbola >= x6 && xbola <=(x6 + 50) && ybola >= (y4) && ybola <=(y4 + 25)) {
       velybola = velybola * -1;
       est46 = 0;
+      puntos = puntos + 5;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -630,6 +657,7 @@ function colisionladrillos() {
     if (xbola >= x7 && xbola <=(x7 + 50) && ybola >= (y4) && ybola <=(y4 + 25)) {
       velybola = velybola * -1;
       est47 = 0;
+      puntos = puntos + 5;
       romperbloque_sound.currentTime = 1.1;
       romperbloque_sound.play();
     }
@@ -637,9 +665,17 @@ function colisionladrillos() {
 }
 
 function hp(){
-  ctx.font = "25px Arial";
-  ctx.fillStyle = 'red'
-  ctx.fillText(vidas, 550, 890);
+  ctx.font = "25px Lazer84";
+  ctx.fillStyle = 'yellow'
+  ctx.fillText("Vidas", 510, 800);
+  ctx.fillText(vidas, 540, 840);
+}
+function score() {
+  ctx.font = "25px Lazer84";
+  ctx.fillStyle = 'yellow'
+  ctx.fillText("Score", 20, 800);
+  ctx.fillText(puntos, 45, 840);
+
 }
 function gameover(){
   if (estado == ESTADO.FIN){
@@ -671,12 +707,54 @@ function gameover(){
       est45 = 1;
       est46 = 1;
       est47 = 1;
+      vidas = 4;
       estado == ESTADO.INIT;
-      vidas = 3;
       ctx.strokeStyle = 'RED';
       ctx.font = "Lazer84.ttf";
       ctx.strokeText("GAME OVER", 225, 700);
   }
+}
+function win(){
+  if (puntos == 76 || puntos == 152){
+    win_sound.currentTime = 0;
+    win_sound.play();
+  }
+  if (puntos == 77 || puntos == 154){ 
+    est11 = 1;
+    est12 = 1;
+    est13 = 1;
+    est14 = 1;
+    est15 = 1;
+    est16 = 1;
+    est17 = 1;
+    est21 = 1;
+    est22 = 1;
+    est23 = 1;
+    est24 = 1;
+    est25 = 1;
+    est26 = 1;
+    est27 = 1;
+    est31 = 1;
+    est32 = 1;
+    est33 = 1;
+    est34 = 1;
+    est35 = 1;
+    est36 = 1;
+    est37 = 1;
+    est41 = 1;
+    est42 = 1;
+    est43 = 1;
+    est44 = 1;
+    est45 = 1;
+    est46 = 1;
+    est47 = 1;
+    estado == ESTADO.INIT;
+    console.log(estado);
+    ctx.strokeStyle = 'RED';
+    ctx.font = "Lazer84.ttf";
+    ctx.strokeText("YOU WIN", 250, 700);
+  }
+
 }
 
 function update() 
@@ -738,9 +816,11 @@ function update()
   drawraqueta();
   drawladrillos();
   hp();
+  score();
   gameover();
+  win();
 
-  if ( estado == ESTADO.INIT)
+  if (estado == ESTADO.INIT)
   {   
       xbola = 300;
       ybola = 850;

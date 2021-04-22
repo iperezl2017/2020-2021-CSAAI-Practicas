@@ -53,7 +53,7 @@ const ESTADO = {
 }
 let estado = ESTADO.INIT
 //Contador
-let puntos = 75;
+let puntos = 0;
 //Estados ladrillos
 //Estados fila1
 let est11 = 1;
@@ -793,11 +793,11 @@ function update()
 
   colisionladrillos();
 
-  if(puntos == 77){
+  if(puntos == 77 ||  puntos == 164 || puntos == 251 || puntos == 338){
+    setTimeout(textowin(),5000);
     estado = ESTADO.WIN;
     win_sound.currentTime = 0;
     win_sound.play();
-    setTimeout(textowin(),2000);
   }
   //Limites raqueta
   if (xRaqueta < 0) {
@@ -812,8 +812,9 @@ function update()
     lost_sound.currentTime = 0;
     lost_sound.play();
     if (vidas == 0){
+      setTimeout(textogameover(),5000);
       estado = ESTADO.FIN;
-      setTimeout(textogameover(),2000);
+      
     }
   }
 }

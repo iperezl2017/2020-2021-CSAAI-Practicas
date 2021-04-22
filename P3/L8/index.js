@@ -708,6 +708,7 @@ function gameover(){
       est46 = 1;
       est47 = 1;
       vidas = 4;
+      puntos = 0;
       estado == ESTADO.INIT;
       ctx.strokeStyle = 'RED';
       ctx.font = "Lazer84.ttf";

@@ -27,23 +27,9 @@ div{
     margin-left: 13%;
     font-size: 200%;
 }
-div2{
-    font-family: "Lazer84";
-    color: aqua;
-    margin-top: 40%;
-    margin-right: -40%;
-    font-size: 200%;
-}
 .Tabla{
     font-family: "Lazer84";
     color: rgb(255, 251, 10);
     font-size: medium;
     margin-top: 5%;
-}
-.Tabla1{
-    font-family: "Lazer84";
-    color: rgb(14, 10, 241);
-    font-size: medium;
-    margin-top: 40%;
-    margin-left : 75%;
 }

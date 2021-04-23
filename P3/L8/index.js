@@ -858,11 +858,11 @@ window.onkeydown = (e) => {
     case " ":
       estado = ESTADO.JUGANDO;
     break;
-    case "o":
+    case "p":
       myAudio.play();
       console.log("play");
     break;
-    case "p":
+    case "o":
       mute();
       console.log("mute");
     break;

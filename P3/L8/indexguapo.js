@@ -65,6 +65,27 @@ let estado = ESTADO.INIT
 //Contador
 let puntos = 0;
 //Estados ladrillos
+let xinicial = 40;
+let yinicial = 50;
+let xincremento = 80;
+let i = 0;
+let j = 0;
+let filas = 7;
+let columnas = 4;
+var arraybloques = [];
+for(i = 0; i < filas; i++){
+    arraybloques[i] = [];
+}
+for (i = 0; i <= filas; i++){
+    for(j = 0; j <= columnas; j++){
+        var bloques = {
+            x : xinicial + i * xincremento,
+            y : yinicial + j * yinicial,
+            estado : 1,
+        }
+        arraybloques[i][j] = bloques;
+    }
+}
 //Estados fila1
 let est11 = 1;
 let est12 = 1;
@@ -874,6 +895,8 @@ function win(){
 function update() 
 {
   console.log("test");
+
+
 
   if (estado == ESTADO.JUGANDO){
 

@@ -15,32 +15,29 @@ let j = 0;
 let filas = 7;
 let columnas = 4;
 var arraybloques = new Array(filas*columnas);
+var arraycolores = ['red', 'yellow' ,'green', 'blue'];
 let b = 0;
 
 for (i = 0; i < filas; i++){
     for(j = 0; j < columnas; j++){
-        r = Math.floor(Math.random() * 255);
-        g = Math.floor(Math.random() * 255);
-        b = Math.floor(Math.random() * 255);
-        console.log(r);
-        console.log(g);
-        console.log(b);
+        //R = Math.floor(Math.random() * (255));
+        //G = Math.floor(Math.random() * (100 - 50) + 50);
+        //B = Math.floor(Math.random() * (100 - 50) + 50);
         var bloque = {
             x : xinicial + i * xincremento,
             y : yinicial + j * yinicial,
             estado : 1,
-            color : 'rgb('+ r + ',' + g +',' + b +')'
+            color : arraycolores[Math.floor(Math.random()*4)]
         };
-        arraybloques[b] = bloque;
+        arraybloques[b] = bloque; 
+        console.log(b);
+        console.log(arraybloques[b]);
         b = b + 1;
+        
     }
-    
-    console.log("eh");
-    console.log(arraybloques[b].color);
 }
 function dibujarladrillos(){
     for (b = 0; b < filas*columnas; b++){
-        var auxiliar = arraybloques[b];
         if (arraybloques[b].estado == 1){
             ctx.beginPath();
                 ctx.rect(arraybloques[b].x,arraybloques[b].y,50,25);
@@ -50,6 +47,11 @@ function dibujarladrillos(){
             ctx.closePath();
         }
     }
+}
+
+function colisionesladrillos(){
+    for (bloque : arraybloques)
+    
 }
 function update(){
 

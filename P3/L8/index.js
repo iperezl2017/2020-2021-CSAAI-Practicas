@@ -706,7 +706,7 @@ function powerup(){
       ctx.stroke()
     ctx.closePath();
 
-    ypowerup = ypowerup + 10;
+    ypowerup = ypowerup + 5;
     if (xpowerup >= xRaqueta && xpowerup <=(xRaqueta + 100) && ypowerup >= (yRaqueta - 15) && ypowerup <=(yRaqueta + 25)) {
       estpowerup = 1;
       balaizq = 1;
@@ -734,47 +734,44 @@ function powerup(){
         ctx.closePath();
         ybalader = ybalader - 10;
       }
-
-        
-        
-
-        if (xbalaizq >= x3 && xbalaizq <=(x3 + 50) && ybalaizq >= (y1) && ybalaizq <=(y1 + 25)){
+        if (xbalaizq >= x3 && xbalaizq <=(x3 + 50) && ybalaizq >= (y1) && ybalaizq <=(y1 + 25) && est13 == 1){
           est13 = 0;
           romperbloque_sound.currentTime = 0;
           romperbloque_sound.play();
           balaizq = 0;
           puntos = puntos + 1;
         }
-        if (xbalader >= x5 && xbalader <=(x5 + 25) && ybalader >= (y1) && ybalader <=(y1 + 25)){
+        if (xbalader >= (x5 - 100) && xbalader <=(x5) && ybalader >= (y1) && ybalader <=(y1 + 25) && est15 == 1){
           est15 = 0;
           romperbloque_sound.currentTime = 0;
           romperbloque_sound.play();
           balader = 0;
           puntos = puntos + 1;
+          console.log("se bugea?");
         }
-        if (xbalaizq >= x3 && xbalaizq <=(x3 + 50) && ybalaizq >= (y2) && ybalaizq <=(y2 + 25)){
+        if (xbalaizq >= x3 && xbalaizq <=(x3 + 50) && ybalaizq >= (y2) && ybalaizq <=(y2 + 25) && est23 == 1){
           est23 = 0;
           romperbloque_sound.currentTime = 0;
           romperbloque_sound.play();
           balaizq = 0;
           puntos = puntos + 2;
         }
-        if (xbalader >= x5 && xbalader <=(x5 + 25) && ybalader >= (y2) && ybalader <=(y2 + 25)){
+        if (xbalader >= (x5 - 100) && xbalader <= x5 && ybalader >= (y2) && ybalader <=(y2 + 25) && est25 == 1){
           est25 = 0;
           romperbloque_sound.currentTime = 0;
           romperbloque_sound.play();
           balader = 0;
           puntos = puntos + 2;
+          console.log("que hace");
         }
-        if (xbalaizq >= x3 && xbalaizq <=(x3 + 50) && ybalaizq >= (y3) && ybalaizq <=(y3 + 25)){
+        if (xbalaizq >= x3 && xbalaizq <=(x3 + 50) && ybalaizq >= (y3) && ybalaizq <=(y3 + 25) && est33 == 1){
           est33 = 0;
           romperbloque_sound.currentTime = 0;
           romperbloque_sound.play();
           balaizq = 0;
           puntos = puntos + 3;
-          console.log("eh")
         }
-        if (xbalader >= x5 && xbalader <=(x5 + 25) && ybalader >= (y3) && ybalader <=(y3 + 25)){
+        if (xbalader >= (x5 - 100) && xbalader <=x5 && ybalader >= (y3) && ybalader <=(y3 + 25) && est35 == 1){
           est35 = 0;
           romperbloque_sound.currentTime = 0;
           romperbloque_sound.play();
@@ -782,14 +779,14 @@ function powerup(){
           puntos = puntos + 3;
           console.log("quepasa")
         }
-        if (xbalaizq >= x3 && xbalaizq <=(x3 + 50) && ybalaizq >= (y4) && ybalaizq <=(y4 + 25)){
+        if (xbalaizq >= x3 && xbalaizq <=(x3 + 50) && ybalaizq >= (y4) && ybalaizq <=(y4 + 25) && est43 == 1){
           est43 = 0;
           romperbloque_sound.currentTime = 0;
           romperbloque_sound.play();
           balaizq = 0;
           puntos = puntos + 5;
         }
-        if (xbalader >= x5 && xbalader <=(x5 + 25) && ybalader >= (y4) && ybalader <=(y4 + 25)){
+        if (xbalader >= (x5 - 100) && xbalader <= x5 && ybalader >= (y4) && ybalader <=(y4 + 25) && est45 == 1){
           est45 = 0;
           romperbloque_sound.currentTime = 0;
           romperbloque_sound.play();

@@ -9,6 +9,7 @@ const romperbloque_sound = new Audio("romperbloque.mp3");
 const puntos_sound = new Audio("conseguirpuntos.mp3");
 const pared_sound = new Audio("pared.mp3");
 const raqueta_sound = new Audio("raqueta.mp3");
+const disparo_sound = new Audio("disparo.mp3");
 
 //-- Definir el tamaño del canvas
 canvas.width = 600;
@@ -18,8 +19,6 @@ const ctx = canvas.getContext("2d");
 let xcanvas = 590;
 let ycanvas = 890;
 //Bola
-//let xbola = 300;
-//let ybola = 850;
 let xbola = 300;
 let ybola = 600;
 let velxbola = 5;
@@ -39,6 +38,16 @@ let y1 = 200;
 let y2 = 150;
 let y3 = 100;
 let y4 = 50;
+//Powerup
+let xpowerup = 280;
+let ypowerup = 150;
+let ybalaizq = yRaqueta + 50;
+let xbalaizq = xRaqueta;
+let ybalader= yRaqueta + 50;
+let xbalader= xRaqueta;
+let estpowerup = 0;
+let balaizq = 0;
+let balader = 0;
 //Audio
 const myAudio = document.getElementById('music');
 //Vidas
@@ -108,7 +117,7 @@ ctx.closePath();
 
 //Dibujar bola
 function drawbola(){
-  ctx.beginPath();
+ctx.beginPath();
   ctx.arc(xbola, ybola, 10, 0, 2 * Math.PI);
   ctx.fillStyle = 'red';
   ctx.fill();
@@ -688,6 +697,109 @@ function textogameover(){
   ctx.fillText("GAME OVER", 225, 700);
 }
 
+function powerup(){
+  if (est24 == 0){
+    ctx.beginPath();
+      ctx.arc(xpowerup + 25, ypowerup, 10, 0, 2 * Math.PI);
+      ctx.fillStyle = 'white';
+      ctx.fill();
+      ctx.stroke()
+    ctx.closePath();
+
+    ypowerup = ypowerup + 10;
+    if (xpowerup >= xRaqueta && xpowerup <=(xRaqueta + 100) && ypowerup >= (yRaqueta - 15) && ypowerup <=(yRaqueta + 25)) {
+      estpowerup = 1;
+      balaizq = 1;
+      balader = 1;
+      disparo_sound.currentTime = 0;
+      disparo_sound.play();
+      }
+      if (estpowerup == 1){
+
+        if (balaizq  == 1){
+        ctx.beginPath();
+          ctx.rect(xbalaizq - 15 ,ybalaizq,5,15);
+          ctx.fillStyle = 'white';
+          ctx.fill();
+          ctx.stroke()
+        ctx.closePath();
+        ybalaizq = ybalaizq - 10;
+      }
+        if (balader == 1){
+        ctx.beginPath();
+          ctx.rect(xbalader + 115,ybalader,5,15);
+          ctx.fillStyle = 'white';
+          ctx.fill();
+          ctx.stroke()
+        ctx.closePath();
+        ybalader = ybalader - 10;
+      }
+
+        
+        
+
+        if (xbalaizq >= x3 && xbalaizq <=(x3 + 50) && ybalaizq >= (y1) && ybalaizq <=(y1 + 25)){
+          est13 = 0;
+          romperbloque_sound.currentTime = 0;
+          romperbloque_sound.play();
+          balaizq = 0;
+          puntos = puntos + 1;
+        }
+        if (xbalader >= x5 && xbalader <=(x5 + 25) && ybalader >= (y1) && ybalader <=(y1 + 25)){
+          est15 = 0;
+          romperbloque_sound.currentTime = 0;
+          romperbloque_sound.play();
+          balader = 0;
+          puntos = puntos + 1;
+        }
+        if (xbalaizq >= x3 && xbalaizq <=(x3 + 50) && ybalaizq >= (y2) && ybalaizq <=(y2 + 25)){
+          est23 = 0;
+          romperbloque_sound.currentTime = 0;
+          romperbloque_sound.play();
+          balaizq = 0;
+          puntos = puntos + 2;
+        }
+        if (xbalader >= x5 && xbalader <=(x5 + 25) && ybalader >= (y2) && ybalader <=(y2 + 25)){
+          est25 = 0;
+          romperbloque_sound.currentTime = 0;
+          romperbloque_sound.play();
+          balader = 0;
+          puntos = puntos + 2;
+        }
+        if (xbalaizq >= x3 && xbalaizq <=(x3 + 50) && ybalaizq >= (y3) && ybalaizq <=(y3 + 25)){
+          est33 = 0;
+          romperbloque_sound.currentTime = 0;
+          romperbloque_sound.play();
+          balaizq = 0;
+          puntos = puntos + 3;
+          console.log("eh")
+        }
+        if (xbalader >= x5 && xbalader <=(x5 + 25) && ybalader >= (y3) && ybalader <=(y3 + 25)){
+          est35 = 0;
+          romperbloque_sound.currentTime = 0;
+          romperbloque_sound.play();
+          balader = 0;
+          puntos = puntos + 3;
+          console.log("quepasa")
+        }
+        if (xbalaizq >= x3 && xbalaizq <=(x3 + 50) && ybalaizq >= (y4) && ybalaizq <=(y4 + 25)){
+          est43 = 0;
+          romperbloque_sound.currentTime = 0;
+          romperbloque_sound.play();
+          balaizq = 0;
+          puntos = puntos + 5;
+        }
+        if (xbalader >= x5 && xbalader <=(x5 + 25) && ybalader >= (y4) && ybalader <=(y4 + 25)){
+          est45 = 0;
+          romperbloque_sound.currentTime = 0;
+          romperbloque_sound.play();
+          balader = 0;
+          puntos = puntos + 5;
+        }
+      }
+  }
+}
+
 function gameover(){
   if (estado == ESTADO.FIN){
       est11 = 1;
@@ -826,6 +938,7 @@ function update()
   drawladrillos();
   hp();
   score();
+  powerup();
   gameover();
   win();
 

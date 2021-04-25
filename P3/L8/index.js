@@ -173,6 +173,9 @@ function  gameover(){
 function win(){
   if (estado == ESTADO.WIN){
     estado = ESTADO.INIT;
+    for (b = 0;  b < columnas*filas; b++){
+      arraybloques[b].estado = 1
+  } 
     //for (b = 0;  b < columnas*filas; b++){
       //arraybloques[b].estado = 1
     //} 

@@ -43,8 +43,8 @@ const disparo_sound = new Audio("disparo.mp3");
 const perder_sound = new Audio("gameover.mp3");
 const myAudio = document.getElementById('music');
 //varios
-let puntos = 0;
-let vidas = 3;
+let puntos = 27;
+let vidas = 1;
 //Estados
 const ESTADO = {
     INIT : 0,
@@ -156,28 +156,33 @@ function updatepelota(){
             }
 }
 function  gameover(){
-    if (estado == ESTADO.FIN){
-        for (b = 0;  b < columnas*filas; b++){
-            arraybloques[b].estado = 1
-        } 
-        perder_sound.currentTime = 0;
-        perder_sound.play();
-    }
+  if (estado == ESTADO.FIN){
+    estado = ESTADO.INIT;
+    vidas = 3;
+    puntos = 0;
+    for (b = 0;  b < columnas*filas; b++){
+        arraybloques[b].estado = 1
+    } 
+    
+  }
 }
 function win(){
-    found = false;
-    b = 0;
-    while (found == false && b < filas*columnas){
-        if (arraybloques[b].estado == 1){
-            found = true;
-        }
-        b = b + 1;
-    }
-    if (found == false){
-        gameover();
-    }
-    win_sound.currentTime = 0;
-    win_sound.play();
+  if (estado == ESTADO.WIN){
+    estado = ESTADO.INIT;
+    for (b = 0;  b < columnas*filas; b++){
+      arraybloques[b].estado = 1
+    } 
+    //found = false;
+    //b = 0; 
+    //while (found == false && b < filas*columnas){
+        //if (arraybloques[b].estado == 1){
+            //found = true;
+        //}
+       // b = b + 1;
+    //}
+    //if (found == false){
+    //}  
+  }
 }
 function hp(){
     ctx.font = "25px Lazer84";
@@ -211,9 +216,14 @@ function update(){
     }
     if (vidas == 0){
         estado = ESTADO.FIN;
+        perder_sound.currentTime = 0;
+        perder_sound.play();
     }
-    if (score == 28){
+    if (puntos == 28){
+        puntos = puntos + 2;
         estado = ESTADO.WIN;
+        win_sound.currentTime = 0;
+        win_sound.play();
     }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     dibujarladrillos();
@@ -226,7 +236,6 @@ function update(){
     requestAnimationFrame(update);
 }
 window.onkeydown = (e) => {
-    //-- Según la tecla se hace una cosa u otra
     switch (e.key) {
       case "a":
         xRaqueta = xRaqueta - 20;

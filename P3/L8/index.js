@@ -71,13 +71,12 @@ for (i = 0; i < filas; i++){
         
     }
 }
-function play (){
-    myAudio.muted = "false";
-  }
-  
-  function mute (){
-    myAudio.muted = "true";
-  }
+function play(){
+    myAudio.play();
+}
+function pause(){
+    myAudio.pause();
+}
 function dibujarladrillos(){
     for (b = 0; b < filas*columnas; b++){
         if (arraybloques[b].estado == 1){
@@ -251,7 +250,7 @@ window.onkeydown = (e) => {
         myAudio.play();
       break;
       case "o":
-        mute();
+        myAudio.pause();
       break;
     }
   }

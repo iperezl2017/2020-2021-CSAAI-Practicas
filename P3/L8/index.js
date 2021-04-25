@@ -43,7 +43,7 @@ const disparo_sound = new Audio("disparo.mp3");
 const perder_sound = new Audio("gameover.mp3");
 const myAudio = document.getElementById('music');
 //varios
-let puntos = 26;
+let puntos = 0;
 let vidas = 3;
 //Estados
 const ESTADO = {
@@ -226,7 +226,7 @@ function update(){
         perder_sound.currentTime = 0;
         perder_sound.play();
     }
-    if (puntos == 28 || 58 || 88 || 118 || 148 || 178){
+    if (puntos == 28 || puntos == 58 || puntos == 88 || puntos == 118 || puntos == 148 || puntos == 178){
         puntos = puntos + 2;
         estado = ESTADO.WIN;
         win_sound.volume = 0.3;

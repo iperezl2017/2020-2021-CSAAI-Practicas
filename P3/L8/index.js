@@ -43,7 +43,7 @@ const disparo_sound = new Audio("disparo.mp3");
 const perder_sound = new Audio("gameover.mp3");
 const myAudio = document.getElementById('music');
 //varios
-let puntos = 0;
+let puntos = 26;
 let vidas = 3;
 //Estados
 const ESTADO = {
@@ -112,6 +112,7 @@ function drawraqueta(){
             bloque.estado = 0;
             velybola = velybola * -1;
             puntos = puntos + 1;
+            romperbloque_sound.volume = 0.3;
             romperbloque_sound.currentTime = 1.1;
             romperbloque_sound.play();
         }
@@ -121,6 +122,7 @@ function raquetaupdate(){
     if (xbola >= xRaqueta && xbola <=(xRaqueta + anchuraraqueta + radio) && ybola >= (yRaqueta - radio) && ybola <=(yRaqueta + alturaraqueta + radio) && estadoraqueta == 1) {
         velybola = velybola * -1;
         velxbola = velxbola * 1;
+        raqueta_sound.volume = 0.3;
         raqueta_sound.currentTime = 0;
         raqueta_sound.play();
       }
@@ -134,11 +136,13 @@ function raquetaupdate(){
 function updatepelota(){
       if (xbola < 15 || xbola >= xcanvas) {
         velxbola = -velxbola;
+        pared_sound.volume = 0.3;
         pared_sound.currentTime = 0;
         pared_sound.play();
       }
       if (ybola < 10) {
         velybola = -velybola;
+        pared_sound.volume = 0.3;
         pared_sound.currentTime = 0;
         pared_sound.play();
       }
@@ -150,6 +154,7 @@ function updatepelota(){
     if (ybola > 900){
        estado = ESTADO.INIT;
        vidas = vidas - 1;
+       lost_sound.volume = 0.3;
        lost_sound.currentTime = 0;
        lost_sound.play();
             }
@@ -166,21 +171,22 @@ function  gameover(){
   }
 }
 function win(){
-  //if (estado == ESTADO.WIN){
-    //estado = ESTADO.INIT;
+  if (estado == ESTADO.WIN){
+    estado = ESTADO.INIT;
     //for (b = 0;  b < columnas*filas; b++){
       //arraybloques[b].estado = 1
     //} 
-    found = false;
-    b = 0; 
-    while (found == false && b < filas*columnas){
-        if (arraybloques[b].estado == 1){
-            found = true;
-        }
-       b = b + 1;
-    }
-    if (found == false){
-  }  
+    //found = false;
+    //b = 0; 
+    //while (found == false && b < filas*columnas){
+        //if (arraybloques[b].estado == 1){
+            //found = true;
+        //}
+       //b = b + 1;
+    //}
+    //if (found == false){
+  //}  
+  }
 }
 
 function hp(){
@@ -216,12 +222,14 @@ function update(){
     }
     if (vidas == 0){
         estado = ESTADO.FIN;
+        perder_sound.volume = 0.3;
         perder_sound.currentTime = 0;
         perder_sound.play();
     }
-    if (puntos == 30){
+    if (puntos == 28 || 58 || 88 || 118 || 148 || 178){
         puntos = puntos + 2;
         estado = ESTADO.WIN;
+        win_sound.volume = 0.3;
         win_sound.currentTime = 0;
         win_sound.play();
     }
@@ -247,6 +255,7 @@ window.onkeydown = (e) => {
       estado = ESTADO.JUGANDO;
       break;
       case "p":
+        myAudio.volume = 0.2;
         myAudio.play();
       break;
       case "o":

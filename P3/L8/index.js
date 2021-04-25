@@ -43,8 +43,8 @@ const disparo_sound = new Audio("disparo.mp3");
 const perder_sound = new Audio("gameover.mp3");
 const myAudio = document.getElementById('music');
 //varios
-let puntos = 27;
-let vidas = 1;
+let puntos = 0;
+let vidas = 3;
 //Estados
 const ESTADO = {
     INIT : 0,
@@ -167,23 +167,23 @@ function  gameover(){
   }
 }
 function win(){
-  if (estado == ESTADO.WIN){
-    estado = ESTADO.INIT;
-    for (b = 0;  b < columnas*filas; b++){
-      arraybloques[b].estado = 1
-    } 
-    //found = false;
-    //b = 0; 
-    //while (found == false && b < filas*columnas){
-        //if (arraybloques[b].estado == 1){
-            //found = true;
-        //}
-       // b = b + 1;
-    //}
-    //if (found == false){
-    //}  
-  }
+  //if (estado == ESTADO.WIN){
+    //estado = ESTADO.INIT;
+    //for (b = 0;  b < columnas*filas; b++){
+      //arraybloques[b].estado = 1
+    //} 
+    found = false;
+    b = 0; 
+    while (found == false && b < filas*columnas){
+        if (arraybloques[b].estado == 1){
+            found = true;
+        }
+       b = b + 1;
+    }
+    if (found == false){
+  }  
 }
+
 function hp(){
     ctx.font = "25px Lazer84";
     ctx.fillStyle = 'yellow'
@@ -204,6 +204,7 @@ function update(){
         velxbola = 0;
         xRaqueta = 250;
         yRaqueta = 875;
+        estadoraqueta = 1;
         }
     if (estado == ESTADO.JUGANDO){
         if (velxbola == 0 && velybola == 0){
@@ -219,7 +220,7 @@ function update(){
         perder_sound.currentTime = 0;
         perder_sound.play();
     }
-    if (puntos == 28){
+    if (puntos == 30){
         puntos = puntos + 2;
         estado = ESTADO.WIN;
         win_sound.currentTime = 0;

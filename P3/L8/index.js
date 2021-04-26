@@ -66,9 +66,9 @@ for (i = 0; i < filas; i++){
             estado : 1,
             color : arraycolores[Math.floor(Math.random()*4)]
         };
-        arraybloques[b] = bloque; 
+        arraybloques[b] = bloque;
+        console.log(arraybloques[b]);
         b = b + 1;
-        
     }
 }
 function play(){
@@ -91,7 +91,7 @@ function dibujarladrillos(){
 }
 function drawbola(){
     ctx.beginPath();
-      ctx.arc(xbola, ybola, 10, 0, 2 * Math.PI);
+      ctx.arc(xbola, ybola, radio, 0, 2 * Math.PI);
       ctx.fillStyle = 'red';
       ctx.fill();
       ctx.stroke()
@@ -99,7 +99,7 @@ function drawbola(){
 }
 function drawraqueta(){
     ctx.beginPath();
-    ctx.rect(xRaqueta,yRaqueta,100,25);
+    ctx.rect(xRaqueta,yRaqueta,anchuraraqueta,alturaraqueta);
     ctx.fillStyle = 'rgb(255, 100, 50)';
     ctx.fill();
     ctx.stroke()
@@ -111,7 +111,18 @@ function drawraqueta(){
         if (xbola >= bloque.x && xbola <=(bloque.x + anchuraladrillo + radio) && ybola >= (bloque.y) && ybola <=(bloque.y + alturaladrillo + radio) && bloque.estado == 1){
             bloque.estado = 0;
             velybola = velybola * -1;
+            if (bloque.color == "red"){
             puntos = puntos + 1;
+            }
+            if (bloque.color == "blue"){
+              puntos = puntos + 2;
+            }
+            if (bloque.color == "yellow"){
+              puntos = puntos + 3;
+            }
+            if (bloque.color == "green"){
+              puntos = puntos + 4;
+            }
             romperbloque_sound.volume = 0.3;
             romperbloque_sound.currentTime = 1.1;
             romperbloque_sound.play();
@@ -171,24 +182,19 @@ function  gameover(){
   }
 }
 function win(){
-  if (estado == ESTADO.WIN){
-    estado = ESTADO.INIT;
-    for (b = 0;  b < columnas*filas; b++){
-      arraybloques[b].estado = 1
-  } 
-    //for (b = 0;  b < columnas*filas; b++){
-      //arraybloques[b].estado = 1
-    //} 
-    //found = false;
-    //b = 0; 
-    //while (found == false && b < filas*columnas){
-        //if (arraybloques[b].estado == 1){
-            //found = true;
-        //}
-       //b = b + 1;
-    //}
-    //if (found == false){
-  //}  
+    found = false;
+    b = 0; 
+    while (found == false && b < filas*columnas){
+        if (arraybloques[b].estado == 1){
+            found = true;
+        }
+       b = b + 1;
+    }
+    if (found == false){
+      for (b = 0;  b < columnas*filas; b++){
+        arraybloques[b].estado = 1
+    }  
+    estado = ESTADO.WIN;
   }
 }
 
@@ -229,12 +235,11 @@ function update(){
         perder_sound.currentTime = 0;
         perder_sound.play();
     }
-    if (puntos == 28 || puntos == 58 || puntos == 88 || puntos == 118 || puntos == 148 || puntos == 178){
-        puntos = puntos + 2;
-        estado = ESTADO.WIN;
+    if (estado == ESTADO.WIN){
         win_sound.volume = 0.3;
         win_sound.currentTime = 0;
         win_sound.play();
+        estado = ESTADO.INIT;
     }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     dibujarladrillos();

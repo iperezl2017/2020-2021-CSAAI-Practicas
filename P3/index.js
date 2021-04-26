@@ -67,7 +67,6 @@ for (i = 0; i < filas; i++){
             color : arraycolores[Math.floor(Math.random()*4)]
         };
         arraybloques[b] = bloque;
-        console.log(arraybloques[b]);
         b = b + 1;
     }
 }

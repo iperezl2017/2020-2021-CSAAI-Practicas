@@ -52,7 +52,7 @@ let balader = 0;
 //Audio
 const myAudio = document.getElementById('music');
 //Vidas
-let vidas = 1;
+let vidas = 3;
 //Estados
 const ESTADO = {
   INIT : 0,
@@ -63,7 +63,7 @@ const ESTADO = {
 }
 let estado = ESTADO.INIT
 //Contador
-let puntos = 76;
+let puntos = 0;
 //Estados ladrillos
 //Estados fila1
 let est11 = 1;

@@ -9,11 +9,11 @@ let ycanvas = 890;
 //ladrillos
 let xinicial = 40;
 let yinicial = 50;
-let xincremento = 80;
+let xincremento = 60;
 let i = 0;
 let j = 0;
-let filas = 7;
-let columnas = 4;
+let filas = 9;
+let columnas = 5;
 var arraybloques = new Array(filas*columnas);
 var arraycolores = ['red', 'yellow' ,'green', 'blue'];
 let b = 0;
@@ -28,8 +28,8 @@ let yRaqueta = 875;
 let estadoraqueta = 1;
 //dimensiones
 let radio = 10;
-let alturaladrillo = 25;
-let anchuraladrillo = 50;
+let alturaladrillo = 20;
+let anchuraladrillo = 40;
 let alturaraqueta = 25;
 let anchuraraqueta = 100;
 //sonidos
@@ -200,15 +200,31 @@ function win(){
 }
 
 function hp(){
+    var hp = new Image;
+    hp.src = 'hp.png'
+    var xcorazon = 50;
+    var ycorazon = 50;
     ctx.font = "25px Lazer84";
     ctx.fillStyle = 'yellow'
-    ctx.fillText("Vidas", 510, 800);
-    ctx.fillText(vidas, 540, 840);
+    ctx.fillText("Vidas", 500, 790);
+    if (vidas == 3){
+      ctx.drawImage(hp, 475, 800, xcorazon, ycorazon);
+      ctx.drawImage(hp, 515, 800, xcorazon, ycorazon);
+      ctx.drawImage(hp, 555, 800, xcorazon, ycorazon);
+    }
+    if (vidas == 2){
+      ctx.drawImage(hp, 475, 800, xcorazon, ycorazon);
+      ctx.drawImage(hp, 515, 800, xcorazon, ycorazon);
+    }
+    if (vidas == 1){
+      ctx.drawImage(hp, 475, 800, xcorazon, ycorazon);
+    }
+    //ctx.fillText(vidas, 540, 840);
 }
 function score() {
     ctx.font = "25px Lazer84";
     ctx.fillStyle = 'yellow'
-    ctx.fillText("Score", 20, 800);
+    ctx.fillText("Score", 20, 790);
     ctx.fillText(puntos, 45, 840);
 }
 function update(){ 

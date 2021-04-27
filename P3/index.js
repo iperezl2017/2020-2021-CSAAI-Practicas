@@ -117,7 +117,7 @@ function drawraqueta(){
   function colisionesladrillos(){
     for (var bloqueindice in arraybloques){
         bloque = arraybloques[bloqueindice];
-        if (xbola >= bloque.x && xbola <=(bloque.x + anchuraladrillo + radio) && ybola >= (bloque.y) && ybola <=(bloque.y + alturaladrillo + radio) && bloque.estado == 1){
+        if (xbola >= bloque.x && xbola <=(bloque.x + anchuraladrillo + radio) && ybola >= (bloque.y - radio) && ybola <=(bloque.y + alturaladrillo + radio) && bloque.estado == 1){
             bloque.estado = 0;
             velybola = velybola * -1;
             if (bloque.color == "red"){

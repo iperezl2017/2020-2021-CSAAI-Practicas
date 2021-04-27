@@ -235,10 +235,10 @@ function score() {
     ctx.fillText(puntos, 45, 840);
 }
 function powerup(){
-  for (var bloqueindice in arraybloques){
-    bloque = arraybloques[bloqueindice];  
+  for (var bloqueindice2 in arraybloques){
+    bloque = arraybloques[bloqueindice2];  
   }
-  console.log(bloque.powerup)
+  console.log(bloque.powerup);
   if (bloque.powerup == 10 && bloque.estado == 0){
     ctx.beginPath();
       ctx.arc(bloque.x + 20, bloque.y, radio, 0, 2 * Math.PI);

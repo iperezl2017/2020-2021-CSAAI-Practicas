@@ -45,6 +45,8 @@ const myAudio = document.getElementById('music');
 //varios
 let puntos = 0;
 let vidas = 3;
+let xpowerup = 45;
+let ypowerup = 10;
 //Estados
 const ESTADO = {
     INIT : 0,
@@ -64,12 +66,19 @@ for (i = 0; i < filas; i++){
             x : xinicial + i * xincremento,
             y : yinicial + j * yinicial,
             estado : 1,
-            color : arraycolores[Math.floor(Math.random()*4)]
+            color : arraycolores[Math.floor(Math.random()*4)],
+            powerup :Math.floor(Math.random()*20)
+
         };
         arraybloques[b] = bloque;
         b = b + 1;
     }
 }
+for (b = 0; b < filas*columnas; b++){
+  arraybloques[b].powerup = 10;
+  console.log(arraybloques[b].powerup); 
+}
+
 function play(){
     myAudio.play();
 }
@@ -208,6 +217,7 @@ function hp(){
     ctx.fillStyle = 'yellow'
     ctx.fillText("Vidas", 500, 790);
     if (vidas == 3){
+      ctx.globalAlpha = 0.9;
       ctx.drawImage(hp, 475, 800, xcorazon, ycorazon);
       ctx.drawImage(hp, 515, 800, xcorazon, ycorazon);
       ctx.drawImage(hp, 555, 800, xcorazon, ycorazon);
@@ -227,6 +237,49 @@ function score() {
     ctx.fillText("Score", 20, 790);
     ctx.fillText(puntos, 45, 840);
 }
+function powerup(){
+  for (var bloqueindice in arraybloques){
+    bloque = arraybloques[bloqueindice];
+  }
+  if (bloque.powerup == 10 && bloque.estado == 0){
+    ctx.beginPath();
+      ctx.arc(bloque.x + 20, bloque.y, radio, 0, 2 * Math.PI);
+      ctx.fillStyle = 'white';
+      ctx.fill();
+      ctx.stroke()
+    ctx.closePath();
+    ypowerup = ypowerup + 5;
+    if (xpowerup >= xRaqueta && xpowerup <=(xRaqueta + anchuraraqueta + radio) && ypowerup >= (yRaqueta - radio) && ypowerup <=(yRaqueta + alturaraqueta + radio)) {
+      estpowerup = 1;
+      balaizq = 1;
+      balader = 1;
+      disparo_sound.currentTime = 0;
+      disparo_sound.play();
+      if (estpowerup == 1){
+        if (balaizq  == 1){
+        ctx.beginPath();
+          ctx.rect(xRaqueta - 45 ,yRaqueta + 10,5,15);
+          ctx.fillStyle = 'white';
+          ctx.fill();
+          ctx.stroke()
+        ctx.closePath();
+        ybalaizq = ybalaizq - 10;
+      }
+        if (balader == 1){
+        ctx.beginPath();
+          ctx.rect(xRaqueta + 45,yRaqueta + 10,5,15);
+          ctx.fillStyle = 'white';
+          ctx.fill();
+          ctx.stroke()
+        ctx.closePath();
+        ybalader = ybalader - 10;
+        }
+      }
+    }
+  }
+} 
+
+
 function update(){ 
     if (estado == ESTADO.INIT){   
         xbola = 300;
@@ -266,6 +319,7 @@ function update(){
     win();
     hp();
     score();
+    powerup();
     requestAnimationFrame(update);
 }
 window.onkeydown = (e) => {

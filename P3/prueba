@@ -1,0 +1,27 @@
+   while(xpowerup >= xRaqueta && xpowerup <=(xRaqueta + anchuraraqueta + radio) && ypowerup >= (yRaqueta - radio) && ypowerup <=(yRaqueta + alturaraqueta + radio)){
+   estpowerup = 1;
+        balaizq = 1;
+        balader = 1;
+        disparo_sound.currentTime = 0;
+        disparo_sound.play();
+        if (estpowerup == 1){
+          if (balaizq  == 1){
+          ctx.beginPath();
+            ctx.rect(xRaqueta - 45 ,yRaqueta + 10,5,15);
+            ctx.fillStyle = 'white';
+            ctx.fill();
+            ctx.stroke()
+          ctx.closePath();
+          ybalaizq = ybalaizq - 10;
+        }
+          if (balader == 1){
+          ctx.beginPath();
+            ctx.rect(xRaqueta + 45,yRaqueta + 10,5,15);
+            ctx.fillStyle = 'white';
+            ctx.fill();
+            ctx.stroke()
+          ctx.closePath();
+          ybalader = ybalader - 10;
+        }
+    }
+}

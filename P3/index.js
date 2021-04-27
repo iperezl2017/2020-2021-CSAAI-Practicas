@@ -45,8 +45,6 @@ const myAudio = document.getElementById('music');
 //varios
 let puntos = 0;
 let vidas = 3;
-let xpowerup = 45;
-let ypowerup = 10;
 //Estados
 const ESTADO = {
     INIT : 0,
@@ -235,47 +233,25 @@ function score() {
     ctx.fillText(puntos, 45, 840);
 }
 function powerup(){
-  for (var bloqueindice2 in arraybloques){
-    bloque = arraybloques[bloqueindice2];  
-  }
-  console.log(bloque.powerup);
-  if (bloque.powerup == 10 && bloque.estado == 0){
-    ctx.beginPath();
-      ctx.arc(bloque.x + 20, bloque.y, radio, 0, 2 * Math.PI);
-      ctx.fillStyle = 'white';
-      ctx.fill();
-      ctx.stroke()
-    ctx.closePath();
-    ypowerup = ypowerup + 5;
-    if (xpowerup >= xRaqueta && xpowerup <=(xRaqueta + anchuraraqueta + radio) && ypowerup >= (yRaqueta - radio) && ypowerup <=(yRaqueta + alturaraqueta + radio)) {
-      estpowerup = 1;
-      balaizq = 1;
-      balader = 1;
-      disparo_sound.currentTime = 0;
-      disparo_sound.play();
-      if (estpowerup == 1){
-        if (balaizq  == 1){
-        ctx.beginPath();
-          ctx.rect(xRaqueta - 45 ,yRaqueta + 10,5,15);
-          ctx.fillStyle = 'white';
-          ctx.fill();
-          ctx.stroke()
-        ctx.closePath();
-        ybalaizq = ybalaizq - 10;
-      }
-        if (balader == 1){
-        ctx.beginPath();
-          ctx.rect(xRaqueta + 45,yRaqueta + 10,5,15);
-          ctx.fillStyle = 'white';
-          ctx.fill();
-          ctx.stroke()
-        ctx.closePath();
-        ybalader = ybalader - 10;
+  for (b = 0; b < filas*columnas; b++){
+    if (arraybloques[b].powerup == 10 && arraybloques[b].estado == 0){
+      xpowerup = arraybloques[b].x;
+      ypowerup = arraybloques[b].y;
+      while(xpowerup >= xRaqueta && xpowerup <=(xRaqueta + anchuraraqueta + radio) && ypowerup >= (yRaqueta - radio) && ypowerup <=(yRaqueta + alturaraqueta + radio)){
+      ctx.beginPath();
+        ctx.arc(xpowerup + 20, ypowerup, radio, 0, 2 * Math.PI);
+        ctx.fillStyle = 'white';
+        ctx.fill();
+        ctx.stroke()
+      ctx.closePath();
+      console.log(ypowerup);
+      ypowerup = ypowerup + 5;
+      console.log(ypowerup);
         }
       }
     }
   }
-}
+
 function update(){ 
     if (estado == ESTADO.INIT){   
         xbola = 300;

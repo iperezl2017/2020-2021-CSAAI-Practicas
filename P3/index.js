@@ -89,9 +89,11 @@ function dibujarladrillos(){
     }
 }
 function drawbola(){
+  var img = new Image();
+  img.src = "bola.jpg";
     ctx.beginPath();
       ctx.arc(xbola, ybola, radio, 0, 2 * Math.PI);
-      ctx.fillStyle = 'red';
+      ctx.fillStyle = ctx.createPattern(img,"repeat");
       ctx.fill();
       ctx.stroke()
     ctx.closePath();
@@ -99,7 +101,7 @@ function drawbola(){
 function drawraqueta(){
     ctx.beginPath();
     ctx.rect(xRaqueta,yRaqueta,anchuraraqueta,alturaraqueta);
-    ctx.fillStyle = 'rgb(255, 100, 50)';
+    ctx.fillStyle = 'rgb(255, 50, 50)';
     ctx.fill();
     ctx.stroke()
   ctx.closePath();

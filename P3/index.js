@@ -12,8 +12,8 @@ let yinicial = 50;
 let xincremento = 60;
 let i = 0;
 let j = 0;
-let filas = 9;
-let columnas = 5;
+let filas = 5;
+let columnas = 9;
 var arraybloques = new Array(filas*columnas);
 var arraycolores = ['red', 'yellow' ,'green', 'blue'];
 let b = 0;
@@ -55,10 +55,10 @@ const ESTADO = {
     FIN : 4,
     WIN : 5
   }
-  let estado = ESTADO.INIT
-
-for (i = 0; i < filas; i++){
-    for(j = 0; j < columnas; j++){
+let estado = ESTADO.INIT
+//Crear bloques
+for (i = 0; i < columnas; i++){
+    for(j = 0; j < filas; j++){
         //R = Math.floor(Math.random() * (255));
         //G = Math.floor(Math.random() * (100 - 50) + 50);
         //B = Math.floor(Math.random() * (100 - 50) + 50);
@@ -68,7 +68,6 @@ for (i = 0; i < filas; i++){
             estado : 1,
             color : arraycolores[Math.floor(Math.random()*4)],
             powerup :Math.floor(Math.random()*20)
-
         };
         arraybloques[b] = bloque;
         b = b + 1;
@@ -188,7 +187,6 @@ function  gameover(){
     for (b = 0;  b < columnas*filas; b++){
         arraybloques[b].estado = 1
     } 
-    
   }
 }
 function win(){
@@ -207,7 +205,6 @@ function win(){
     estado = ESTADO.WIN;
   }
 }
-
 function hp(){
     var hp = new Image;
     hp.src = 'hp.png'
@@ -239,8 +236,9 @@ function score() {
 }
 function powerup(){
   for (var bloqueindice in arraybloques){
-    bloque = arraybloques[bloqueindice];
+    bloque = arraybloques[bloqueindice];  
   }
+  console.log(bloque.powerup)
   if (bloque.powerup == 10 && bloque.estado == 0){
     ctx.beginPath();
       ctx.arc(bloque.x + 20, bloque.y, radio, 0, 2 * Math.PI);
@@ -277,9 +275,7 @@ function powerup(){
       }
     }
   }
-} 
-
-
+}
 function update(){ 
     if (estado == ESTADO.INIT){   
         xbola = 300;

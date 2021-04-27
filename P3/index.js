@@ -45,6 +45,16 @@ const myAudio = document.getElementById('music');
 //varios
 let puntos = 0;
 let vidas = 3;
+//powerup
+let xpowerup = 0;
+let ypowerup = 0;
+let ybalaizq = yRaqueta + 50;
+let xbalaizq = xRaqueta;
+let ybalader= yRaqueta + 50;
+let xbalader= xRaqueta;
+let estpowerup = 0;
+let balaizq = 0;
+let balader = 0;
 //Estados
 const ESTADO = {
     INIT : 0,
@@ -65,7 +75,8 @@ for (i = 0; i < columnas; i++){
             y : yinicial + j * yinicial,
             estado : 1,
             color : arraycolores[Math.floor(Math.random()*4)],
-            powerup :Math.floor(Math.random()*20)
+            powerup :Math.floor(Math.random()*20),
+            powerupest : 1
         };
         arraybloques[b] = bloque;
         b = b + 1;
@@ -82,7 +93,7 @@ function play(){
 function pause(){
     myAudio.pause();
 }
-function dibujarladrillos(){
+function dibujarLadrillos(){
     for (b = 0; b < filas*columnas; b++){
         if (arraybloques[b].estado == 1){
             ctx.beginPath();
@@ -235,22 +246,48 @@ function score() {
 function powerup(){
   for (b = 0; b < filas*columnas; b++){
     if (arraybloques[b].powerup == 10 && arraybloques[b].estado == 0){
+      if (arraybloques[b].powerupest == 1){
       xpowerup = arraybloques[b].x;
       ypowerup = arraybloques[b].y;
-      while(xpowerup >= xRaqueta && xpowerup <=(xRaqueta + anchuraraqueta + radio) && ypowerup >= (yRaqueta - radio) && ypowerup <=(yRaqueta + alturaraqueta + radio)){
+      arraybloques[b].powerupest = 0;
+    }
       ctx.beginPath();
         ctx.arc(xpowerup + 20, ypowerup, radio, 0, 2 * Math.PI);
         ctx.fillStyle = 'white';
         ctx.fill();
         ctx.stroke()
       ctx.closePath();
-      console.log(ypowerup);
       ypowerup = ypowerup + 5;
-      console.log(ypowerup);
-        }
       }
-    }
+      if (xpowerup >= xRaqueta && xpowerup <=(xRaqueta + anchuraraqueta + radio) && ypowerup >= (yRaqueta - radio) && ypowerup <=(yRaqueta + alturaraqueta + radio)){
+        estpowerup = 1;
+        balaizq = 1;
+        balader = 1;
+        disparo_sound.currentTime = 0;
+        disparo_sound.play();
+          if (estpowerup == 1){
+            if (balaizq  == 1){
+              ctx.beginPath();
+                ctx.rect(xRaqueta - 45 ,yRaqueta + 10,5,15);
+                ctx.fillStyle = 'white';
+                ctx.fill();
+                ctx.stroke()
+              ctx.closePath();
+              ybalaizq = ybalaizq - 10;
+            }
+            if (balader == 1){
+              ctx.beginPath();
+                ctx.rect(xRaqueta + 45,yRaqueta + 10,5,15);
+                ctx.fillStyle = 'white';
+                ctx.fill();
+                ctx.stroke()
+              ctx.closePath();
+              ybalader = ybalader - 10;
+            }
+          }
+      }
   }
+}
 
 function update(){ 
     if (estado == ESTADO.INIT){   
@@ -284,7 +321,7 @@ function update(){
         estado = ESTADO.INIT;
     }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    dibujarladrillos();
+    dibujarLadrillos();
     drawbola();
     drawraqueta();
     gameover();

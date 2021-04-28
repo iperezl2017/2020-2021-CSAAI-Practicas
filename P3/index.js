@@ -243,6 +243,7 @@ function score() {
     ctx.fillText("Score", 20, 790);
     ctx.fillText(puntos, 45, 840);
 }
+/*
 function powerup(){
   for (b = 0; b < filas*columnas; b++){
     if (arraybloques[b].powerup == 10 && arraybloques[b].estado == 0){
@@ -260,6 +261,7 @@ function powerup(){
       ypowerup = ypowerup + 5;
       }
       if (xpowerup >= xRaqueta && xpowerup <=(xRaqueta + anchuraraqueta + radio) && ypowerup >= (yRaqueta - radio) && ypowerup <=(yRaqueta + alturaraqueta + radio)){
+        ypowerup = ypowerup;
         estpowerup = 1;
         balaizq = 1;
         balader = 1;
@@ -288,6 +290,7 @@ function powerup(){
       }
   }
 }
+*/
 
 function update(){ 
     if (estado == ESTADO.INIT){   
@@ -328,7 +331,7 @@ function update(){
     win();
     hp();
     score();
-    powerup();
+    //powerup();
     requestAnimationFrame(update);
 }
 window.onkeydown = (e) => {

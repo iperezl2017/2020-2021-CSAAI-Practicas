@@ -84,7 +84,6 @@ for (i = 0; i < columnas; i++){
 }
 for (b = 0; b < filas*columnas; b++){
   arraybloques[b].powerup = 10;
-  console.log(arraybloques[b].powerup); 
 }
 
 function play(){

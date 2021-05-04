@@ -321,6 +321,7 @@ function update(){
         win_sound.currentTime = 0;
         win_sound.play();
         estado = ESTADO.INIT;
+        vidas = vidas + 1;
     }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     dibujarLadrillos();

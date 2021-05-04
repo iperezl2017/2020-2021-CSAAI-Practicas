@@ -322,6 +322,9 @@ function update(){
         win_sound.play();
         estado = ESTADO.INIT;
         vidas = vidas + 1;
+        if (vidas > 3){
+          vidas = 3;
+        }
     }
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     dibujarLadrillos();

@@ -4,7 +4,7 @@ body{
 }
 .div1{
     width: fit-content;
-    height: fit-content;
+    height: 459px;
     margin-left: 60%;
     margin-top: -22.3%;
     border: darkblue 5px solid;
@@ -12,7 +12,7 @@ body{
 }
 .div2{
     width: fit-content;
-    height: fit-content;
+    height: 459px;
     margin-top: 10%;
     margin-left: 10%;
     border: crimson 5px solid;

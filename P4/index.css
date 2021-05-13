@@ -26,3 +26,13 @@ body{
 p{
     color: crimson;
 }
+.original{
+    margin-top: 5%;
+    margin-left: 21%;
+    color: darkcyan;
+}
+.manipulada{
+    margin-top: -3%;
+    margin-left: 71%;
+    color: darkcyan;
+}

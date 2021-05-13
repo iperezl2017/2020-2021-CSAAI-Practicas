@@ -2,17 +2,27 @@ body{
     background: url("fondo.jpg");
     color: aqua;
 }
-
-.div2{
-    margin-top: 10%;
-    margin-left: 10%;
-}
 .div1{
+    width: fit-content;
+    height: fit-content;
     margin-left: 60%;
     margin-top: -22.3%;
+    border: darkblue 5px solid;
+    border-radius: 1%;
+}
+.div2{
+    width: fit-content;
+    height: fit-content;
+    margin-top: 10%;
+    margin-left: 10%;
+    border: crimson 5px solid;
+    border-radius: 1%;
+
 }
 .div3{
-    color: blue;
     margin-left: 73.5%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+p{
+    color: crimson;
 }

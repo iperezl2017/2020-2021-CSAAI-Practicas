@@ -1,0 +1,18 @@
+body{
+    background: url("fondo.jpg");
+    color: aqua;
+}
+
+.div2{
+    margin-top: 10%;
+    margin-left: 10%;
+}
+.div1{
+    margin-left: 60%;
+    margin-top: -22.3%;
+}
+.div3{
+    color: blue;
+    margin-left: 73.5%;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

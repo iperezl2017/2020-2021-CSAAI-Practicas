@@ -13,18 +13,18 @@ body{
 .div2{
     width: fit-content;
     height: 459px;
-    margin-top: 10%;
+    margin-top: 8%;
     margin-left: 10%;
     border: crimson 5px solid;
     border-radius: 1%;
 
 }
 .div3{
-    margin-left: 65%;
+    margin-left: 45%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 p{
-    color: crimson;
+    color: rgb(245, 245, 245);
 }
 .original{
     margin-top: 5%;
@@ -35,4 +35,28 @@ p{
     margin-top: -3%;
     margin-left: 71%;
     color: darkcyan;
+}
+button{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2em;
+  background: rgb(173, 30, 30);
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 4;
+  padding: 0 2em;
+  margin: 1.5em;
+  color: rgb(0, 0, 0);
+  position: relative;
+  transition: all .3s;
+  
+}
+button:hover{
+    color: #9b0e0e;
+    background-color: #bc6355;
+    text-decoration: none;
+}
+.botones{
+    padding-left: 37%;
 }

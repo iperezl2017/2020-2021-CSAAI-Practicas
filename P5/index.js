@@ -34,39 +34,34 @@ video3.poster = TEST_IMAGE_URL;
 btn_src_on.onclick = () => {
  
   //-- Establecer la fuente de la cámara 1
-  video1.src="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente1.mp4";
-  video2.src="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente2.mp4";
-  video3.src="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente3.mp4";
+  video1.src= "https://github.com/iperezl2017/Practica5/raw/main/noleafclover.mp4";
+  video2.src= "https://github.com/iperezl2017/Practica5/raw/main/seekanddestroy.mp4";
+  video3.src= "https://github.com/iperezl2017/Practica5/raw/main/thegodthatfailed.mp4";
 
   //-- Reprodeucimos un vídeo, desde el comienzo
   video1.currentTime = 0;
   video1.play();
-  video1.muted;
-
+  video1.repeat = true;
   video2.currentTime = 0;
   video2.play();
-  video2.muted;
-
   video3.currentTime = 0;
   video3.play();
-  video3.muted;
-
+ 
+  video1.muted = true;
+  video2.muted = true; 
+  video3.muted = true;
   //-- En la emisión en directo ponemos la imagen de prueba
   directo.poster = TEST_IMAGE_URL;
 };
 
 btn_src_off.onclick = () => {
- 
-  
-    //-- Reprodeucimos un vídeo, desde el comienzo
-    video1.currentTime = 0;
-    video1.play();
-  
-    //-- Y en silencio...
-    video1.muted;
-  
-    //-- En la emisión en directo ponemos la imagen de prueba
-    directo.poster = TEST_IMAGE_URL;
+
+    video1.poster = TEST_IMAGE_URL;
+    video1.src = null;
+    video2.poster = TEST_IMAGE_URL;
+    video2.src = null;
+    video3.poster = TEST_IMAGE_URL;
+    video3.src = null;
   };
 
 //-- Botón de Test
@@ -84,13 +79,13 @@ btn_video1.onclick = () => {
 };
 btn_video2.onclick = () => {
     directo.src = video2.src;
-    directo.currentTime = video1.currentTime;
+    directo.currentTime = video2.currentTime;
     directo.play();
     directo.poster=null;
 };
 btn_video3.onclick = () => {
     directo.src = video3.src;
-    directo.currentTime = video1.currentTime;
+    directo.currentTime = video3.currentTime;
     directo.play();
     directo.poster=null;
 };

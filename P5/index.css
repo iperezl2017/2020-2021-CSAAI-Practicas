@@ -1,0 +1,68 @@
+body{
+    background: url("fondo.jpg") no-repeat;
+    background-size: 1920px 1080px;
+}
+
+@font-face{
+    font-family:"rockit";
+    src: url("rockit.ttf");
+}
+
+.button{
+    font-family: "rockit";
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+    text-align: center;	
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #000000;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    
+}
+.button:hover {background-color: #880101}
+
+.button:active {
+  background-color: #5c0000;
+  box-shadow: 0 5px rgb(255, 255, 255);
+  transform: translateY(4px);
+}
+
+#directo{
+    margin-left: 33%;
+}
+#video1{
+    margin-left: 5%;
+
+}
+#video2{
+    margin-left: 12%;
+}
+#video3{
+    margin-left: 15%;
+}
+#btn_video1{
+    margin-left: 35%;
+    margin-top: 2.5%;
+}
+#btn_video2{
+    margin-left: 5%;   
+}
+#btn_video3{
+    margin-left: 5%;
+}
+
+#btn_src_on{
+    margin-left: 33.5%;
+    margin-top: 2.5%;   
+}
+#btn_src_off{
+    margin-left: 3%;   
+}
+#btn_test{
+    margin-left: 4.3%;   
+}

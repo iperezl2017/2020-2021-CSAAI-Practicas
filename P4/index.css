@@ -5,15 +5,15 @@ body{
 .div1{
     width: fit-content;
     height: 459px;
-    margin-left: 60%;
-    margin-top: -22.3%;
+    margin-left: 55%;
+    margin-top: -25%;
     border: darkblue 5px solid;
     border-radius: 1%;
 }
 .div2{
     width: fit-content;
     height: 459px;
-    margin-top: 8%;
+    margin-top: 0%;
     margin-left: 10%;
     border: crimson 5px solid;
     border-radius: 1%;
